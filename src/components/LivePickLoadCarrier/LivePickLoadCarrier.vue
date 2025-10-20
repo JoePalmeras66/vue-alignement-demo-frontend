@@ -64,6 +64,7 @@ export interface PropsLivePickLoadCarrier {
   showLoadCarrierHeader?: boolean
   showLoadCarrierNumber?: boolean
   showLoadCarrierHeaderItems?: boolean
+  isFooterEnabled?: boolean
 }
 const {
   getAdditionalDataValue,
@@ -369,7 +370,7 @@ defineExpose({ triggerAnimation })
         :text="loadCarrierOccupationText"
       />
     </div>
-    <div v-if="showViewContentButton || loadCarrierNumber" class="footer">
+    <div v-if="isFooterEnabled !== false && (showViewContentButton || loadCarrierNumber)" class="footer">
       <IconButton
         v-if="showViewContentButton"
         plain
