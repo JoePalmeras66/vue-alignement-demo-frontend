@@ -95,11 +95,13 @@ const cardConfig = computed(() => {
 
   // Override .load-carrier sizing with CSS variables
   .load-carrier {
-    /* Width from rows mapping */
-    width: var(--lc-card-width, 100%);
+    .content {
+      /* Width from rows mapping */
+      width: var(--lc-card-width, 100%);
 
-    /* Height computed from width and aspect-ratio */
-    height: calc(var(--lc-card-width, 100%) * var(--lc-aspect-ratio));
+      /* Height computed from width and aspect-ratio */
+      height: calc(var(--lc-card-width, 100%) * var(--lc-aspect-ratio));
+    }
   }
 }
 </style>
