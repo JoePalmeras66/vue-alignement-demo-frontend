@@ -1,0 +1,4 @@
+Update to v1.2.1.7925 
+- 125aa92 - Benjamin Hüttenberger, 2023-12-06 : Merged PR 1660: Update Build.Core 0.3.1
+
+- c39aabe - Benjamin Hüttenberger, 2023-12-05 : Merged PR 1653: Add Code Coverage

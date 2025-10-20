@@ -1,0 +1,7 @@
+keycloak_url = "https://c022isredqa01.tgwdev.internal/auth"
+keycloak_realm = "sas-rn-i-central"
+keycloak_client_id = "werx"
+keycloak_client_secret = "884e0f95-0f42-4a63-9b1f-94274655669e"
+keycloak_username = "admin"
+keycloak_password = "Intersport2023"
+keycloak_valid_redirect = "*"

@@ -1,0 +1,109 @@
+# This pipeline checks if all unit tests can be executed without an error
+# and if the project can be build
+
+trigger:
+  - master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  # Prepare SonarQube Configuration
+  # - task: SonarQubePrepare@5
+  #  inputs:
+  #    SonarQube: sonar
+  #    scannerMode: CLI
+  #    configMode: manual
+  #    cliProjectKey: entree
+  #    cliProjectName: entree
+  #    cliSources: .
+  - task: UseDotNet@2
+    displayName: Install .NET Core SDK
+    inputs:
+      packageType: sdk
+      version: 7.0.x
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: 20.x
+    displayName: Install Node.js
+
+  - task: npmAuthenticate@0.238.2
+    displayName: Authenticate TgwUiComponents Feed
+    inputs:
+      workingFile: .npmrc
+      customEndpoint: TgwUiComponents-Feed
+  - task: SonarQubePrepare@5
+    inputs:
+      SonarQube: TGW SonarQube Prod
+      scannerMode: CLI
+      configMode: manual
+      cliProjectKey: PD-UNITED_UIUX_TgwAppBoilerplate
+      cliSources: .
+      extraProperties: |
+        sonar.dependencyCheck.htmlReportPath=$(Common.TestResultsDirectory)/dependency-check/dependency-check-report.html
+        sonar.dependencyCheck.jsonReportPath=$(Common.TestResultsDirectory)/dependency-check/dependency-check-report.json
+        sonar.dependencyCheck.xmlReportPath=$(Common.TestResultsDirectory)/dependency-check/dependency-check-report.xml
+
+  - script: |
+      npm install --prefer-offline --no-audit
+    displayName: Execute npm install
+    retryCountOnTaskFailure: 10
+
+  # Execute OWASP dependency check with a SonarQube Plugin. It fails above a score of 7
+  - task: dependency-check-build-task@6
+    inputs:
+      projectName: PCOTS
+      scanPath: .
+      format: 'HTML, JSON, XML, JUNIT'
+      enableExperimental: true
+      enableVerbose: true
+      dependencyCheckVersion: 8.3.1
+      additionalArguments: --disableNodeAudit --disableOssIndex
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: JUnit
+      testResultsFiles: $(Common.TestResultsDirectory)/**/*junit.xml
+
+  - script: |
+      npm run lint
+    displayName: Check source code syntax
+
+  - script: |
+      npm run test:unit
+    displayName: Execute unit tests
+
+  - script: |
+      npm run build-only
+    displayName: Try to build project
+
+  # - task: SonarQubeAnalyze@5
+  # displayName: Execute SonarQube Analysis
+
+  # - task: SonarQubePublish@5
+  #   displayName: Publish SonarQube Analysis Results
+  #   inputs:
+  #     pollingTimeoutSec: 300
+
+  - task: PowerShell@2
+    displayName: Install licenses discovery tool
+    inputs:
+      targetType: inline
+      script: dotnet tool install --global dotnet-project-licenses --version 2.7.1
+      failOnStderr: true
+
+  - task: PowerShell@2
+    displayName: Execute licenses discovery tool
+    inputs:
+      targetType: inline
+      script: dotnet-project-licenses -i "$(Build.Repository.LocalPath)" -u -t -o -j --outfile "/home/vsts/work/1/s/PCOTS/package.json"
+
+  - task: SonarQubeAnalyze@5
+    inputs:
+      jdkversion: JAVA_HOME
+
+  - task: SonarQubePublish@5
+    inputs:
+      pollingTimeoutSec: '30'

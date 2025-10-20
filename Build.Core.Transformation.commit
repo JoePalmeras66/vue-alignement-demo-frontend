@@ -1,0 +1,6 @@
+Update to v0.5.0.81016 
+- ea73884 - Alexander Steinke, 2024-02-23 : Merged PR 9466: GLXSWXARCH-472 - Improve values.yaml handling and increase k8s conformity
+
+- 76724cc - Andreas Bergermeier, 2024-02-23 : Merged PR 9481: GLXSWXARCH-482 remove checkout from gradle template
+
+- 1f7a12e - Alexander Steinke, 2024-02-22 : Merged PR 9461: GLXSWXARCH-489 - Implement DeliverToProject parameter for gitops delivery pipeline

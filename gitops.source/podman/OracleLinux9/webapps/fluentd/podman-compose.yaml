@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  # logging service for frontend web applications
+  fluentd:
+    container_name: fluentd
+    image: docker.io/fluentd:v1.14.0-1.0
+    restart: always
+    volumes:
+      - ./conf/fluentd.conf:/fluentd/etc/fluent.conf:Z
+    networks:
+      - interConNet
+
+networks:
+  interConNet:
+    external: true

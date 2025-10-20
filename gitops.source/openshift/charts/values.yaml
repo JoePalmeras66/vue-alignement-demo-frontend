@@ -1,0 +1,5 @@
+global:
+  #namespace does not feel right...would be great to find the argo reference instead
+  namespace: PROJECT
+  registry: tgwsoftwarecontainerregistry.azurecr.io
+  image_pull_secret: tgwsoftwarecontainerregistry.azurecr.io

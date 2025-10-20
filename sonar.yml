@@ -1,0 +1,123 @@
+# This pipeline checks if all unit tests can be executed without an error
+# and if the project can be build
+
+trigger:
+  - master
+
+pool:
+  vmImage: ubuntu-latest
+
+resources:
+  repositories:
+    - repository: cve-database # The name used to reference this repository in the checkout step
+      type: git
+      name: cve-database
+
+steps:
+  - checkout: self
+    path: s/
+  - checkout: cve-database
+    lfs: true
+  - task: UseDotNet@2
+    displayName: Install .NET Core SDK
+    inputs:
+      packageType: sdk
+      version: 6.0.x
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+
+  - task: UseDotNet@2
+    displayName: Install .NET Core SDK
+    inputs:
+      packageType: sdk
+      version: 7.0.x
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+
+  - task: UseDotNet@2
+    displayName: Install .NET Core SDK
+    inputs:
+      packageType: sdk
+      version: 8.0.x
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+
+  - task: JavaToolInstaller@0
+    displayName: Install Java 17 SDK
+    inputs:
+      versionSpec: '17'
+      jdkArchitectureOption: 'x64'
+      jdkSourceOption: 'PreInstalled'
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: 20.x
+    displayName: Install Node.js
+
+  - task: npmAuthenticate@0.238.2
+    displayName: Authenticate TgwUiComponents Feed
+    inputs:
+      workingFile: .npmrc
+      customEndpoint: TgwUiComponents-Feed
+
+  - task: SonarQubePrepare@7
+    inputs:
+      SonarQube: TGW SonarQube Prod
+      scannerMode: CLI
+      configMode: manual
+      cliProjectKey: PD-UNITED_UIUX_PCOTS
+      cliSources: .
+      extraProperties: |
+        sonar.dependencyCheck.htmlReportPath=$(Common.TestResultsDirectory)/dependency-check/dependency-check-report.html
+        sonar.dependencyCheck.jsonReportPath=$(Common.TestResultsDirectory)/dependency-check/dependency-check-report.json
+        sonar.dependencyCheck.xmlReportPath=$(Common.TestResultsDirectory)/dependency-check/dependency-check-report.xml
+
+  - script: |
+      npm install --prefer-offline --no-audit
+    displayName: Execute npm install
+    retryCountOnTaskFailure: 10
+
+  - script: |
+      npm run lint
+    displayName: Check source code syntax
+
+  # Execute OWASP dependency check with a SonarQube Plugin. It fails above a score of 7
+  - task: dependency-check-build-task@6
+    inputs:
+      projectName: PCOTS
+      scanPath: .
+      format: 'HTML, JSON, XML, JUNIT'
+      enableExperimental: true
+      enableVerbose: true
+      dependencyCheckVersion: 12.1.0
+      additionalArguments: --disableNodeAudit --disableOssIndex --data $(Build.SourcesDirectory)/cve-database/data
+
+  - script: |
+      npm run test:unit
+    displayName: Execute unit tests
+
+  - script: |
+      npm run build-only
+    displayName: Try to build project
+
+  - script: |
+      npm run type-check
+    displayName: Check TypeScript types with tsc
+
+  - task: PowerShell@2
+    displayName: Install licenses discovery tool
+    inputs:
+      targetType: inline
+      script: dotnet tool install --global dotnet-project-licenses --version 2.7.1
+      failOnStderr: true
+
+  - task: PowerShell@2
+    displayName: Execute licenses discovery tool
+    inputs:
+      targetType: inline
+      script: dotnet-project-licenses -i "$(Build.Repository.LocalPath)" -u -t -o -j --outfile "/home/vsts/work/1/s/PCOTS/package.json"
+
+  - task: SonarQubeAnalyze@7
+    inputs:
+      jdkversion: JAVA_HOME
+
+  - task: SonarQubePublish@7
+    inputs:
+      pollingTimeoutSec: '60'

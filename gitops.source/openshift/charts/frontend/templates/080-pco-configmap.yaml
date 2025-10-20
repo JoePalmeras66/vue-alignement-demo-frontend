@@ -1,0 +1,13 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ .Values.deployment.configmap_name }}
+  namespace: {{ .Values.global.namespace }}
+data:
+  BASE_URL: 'https://DOMAIN/ui/pcots/'
+  VITE_APP_I18N_FALLBACK_LOCALE: de
+  VITE_APP_I18N_LOCALE: en
+  VITE_APP_BFG_URL: 'https://DOMAIN'
+  VITE_APP_CILOG_ADAPTER: 'https://DOMAIN'
+  VITE_APP_PORTAL_URL: 'https://DOMAIN/'
+  VITE_APP_LOGGER_SERVICE: 'http://DOMAIN/pcots-logs'

@@ -1,0 +1,472 @@
+empty: Leer
+info: Information
+success: Erfolgreich
+warning: Warnung
+error: Fehler
+pick-center-one-ts-view:
+  picking: Kommissionierung
+  consolidation: Verdichtung
+  cyclecount: Inventur
+  none: Modus der Arbeitsstation nicht gesetzt
+  messages:
+    zero_crossing: 'Ist der Sektor [highlighted]leer[/highlighted]?'
+  split_pick_title: Pick splitten
+  inventory_title: Stückzahl eingeben
+  move_title: Menge eingeben welche verschoben werden soll
+  compartment_empty: Sektor leer?
+  compartment_empty_description: Sind Sie sicher das keine Artikel mehr im Sektor sind?
+  cancel: Abbrechen
+  confirm: Bestätigen
+  robotic_picking: Roboter Kommissionierung
+  purgeandrecall: Säubern
+  step_picking: Entnehmen und Ablegen
+  step_picking_scan: Artikel scannen
+  step_picking_rovoflex: Sicherheitszone nicht verlassen
+  step_cycle_count: Zählen
+  step_cycle_count_recount: Nachzählen
+  step_purge_and_recall: Säubern
+  step_consolidation: Entnehmen und Ablegen
+  step_consolidation_scan: Artikel scannen
+  step_consolidation_action: Manuelle Aktion wählen
+  step_consolidation_inventory: Einen Artikel wählen
+  step_consolidation_swap: Ersten Sektor wählen
+  step_consolidation_swap_2: Zweiten Sektor wählen
+  step_consolidation_move: Artikel zum Verschieben wählen
+  step_consolidation_move_2: Zielsektor wählen
+load-carrier:
+  no_transports: Keine offenen transporte
+  waiting_for_load_carrier: Warten auf Behälter
+  reject: NiO
+  view_details: Details anzeigen
+  source: Quelle
+  target: Ziel
+  send_away_title: Behälter abschicken
+  send_away_description_1: Sind Sie sicher, dass Sie den
+  send_away_description_2: Behälter
+  send_away_description_3: abschicken wollen?
+  cancel: Abbrechen
+  send_away: Abschicken
+  drive_through: Behälter fährt durch
+  no_read: NOREAD
+convert-load-carrier-dialog:
+  cancel: Abbrechen
+  convert: Umbauen
+  source_load_carrier: Quellbehälter
+  target_load_carrier: Zielbehälter
+  convert_load_carrier_title: '{0} umbauen'
+  convert_load_carrier_description: Wählen Sie den gewünschten Behältertyp aus.
+load-carrier-no-read:
+  load_carrier_no_read: Behälter konnte nicht gelesen werden
+  enter_load_carrier_number: Behälternummer eingeben
+action-bar-texts:
+  confirm: Bestätigen
+  cancel: Abbrechen
+  send_to_reject: An NiO Station senden
+  report_problem: Problem melden
+  split_pick: Pick splitten
+  undo_split: Splitten aufheben
+  n_problems_saved: '{n} Problem gespeichert | {n} Probleme gespeichert'
+  edit_scans: Scans bearbeiten
+  undo_last_scan: Letzten Scan zurücksetzen
+  send_target: Zielbehälter senden
+  show_details: Details zeigen
+zero-crossing:
+  zero_crossing_empty_no: Nein
+  zero_crossing_empty_yes: Ja
+action-bar:
+  edit: Bearbeiten
+  robot_paused: Roboter pausiert
+  error_info: Error info
+consolidation-action-bar:
+  mode_switch: Manueller Modus
+  inventory: Inventur
+  swap: Vertauschen
+  move: Verschieben
+  inventory_description: Wählen Sie den Sektor aus welcher inventiert werden soll
+  swap_description: Wählen Sie die 2 Sektoren die vertauscht werden sollen
+  move_description: Wählen Sie den Sektor welcher verschoben werden soll
+  move_description2: Wählen Sie den Zielsektor
+  send: Senden
+cycle-count-action-bar:
+  advanced_view: Erweiterte Ansicht
+  create_scan: Scan erstellen
+  confirm_and_send: Bestätigen & abschicken
+  confirm_count: Inventur bestätigen
+  empty_compartment_message_box_title: Leerer Sektor
+  empty_compartment_message_box_description: Es wurden keine Artikel gezählt. [new_line]Ist dieser Sektor leer?
+item-image:
+  item_images: Artikelbilder
+  close: Schließen
+  no_photo_available: Kein Foto verfügbar
+load-carrier-header:
+  source: Quelle
+  target: Ziel
+load-carrier-compartment:
+  pick: Nehmen
+  put: Ablegen
+  count: Zählen
+  scan: Scannen
+  recount: Nachzählen
+wm-api:
+  insufficient_permission:
+    get_supported_stations: Sie haben keine Berechtigung, um die Arbeitsplätze zu laden.
+  error_message:
+    get_supported_stations-title: Arbeitsplätze laden fehlgeschlagen
+    get_supported_stations-description: Beim Laden der unterstützten Arbeitsplätze ist ein Fehler aufgetreten.
+pcots-api:
+  insufficient_permission:
+    get_supported_versions: Sie haben keine Berechtigung, die unterstützten Versionen zu laden
+    get_supported_problems: Sie haben keine Berechtigung, die Probleme zu laden.
+    get_workstation_state: Sie haben keine Berechtigung, den Arbeitsplatz status zu laden.
+    get_load_carriers: Sie haben keine Berechtigung, die Container Daten zu laden.
+    get_task: Sie haben keine Berechtigung, die Aufgaben zu laden.
+    get_robot_state: Sie haben keine Berechtigung, den Roboter status zu laden.
+    change_task_execution_mode: Sie haben keine Berechtigung, den Ausführungsmodus zu ändern.
+    book_picking_task: Sie haben keine Berechtigung, eine Kommissionierung zu verbuchen.
+    book_consolidation_task: Sie haben keine Berechtigung, eine Verdichtung zu verbuchen.
+    book_cycle_count_task: Sie haben keine Berechtigung, eine Inventur zu verbuchen.
+    book_purge_and_recall_task: Sie haben keine Berechtigung, eine Säuberung zu verbuchen.
+    verify_barcode: Sie haben keine Berechtigung, um einen Barcode zu verifizieren.
+  error_message:
+    get_supported_versions-title: Versionen laden fehlgeschlagen
+    get_supported_versions-description: Beim Laden der unterstützten Versionen ist ein Fehler aufgetreten.
+    get_supported_problems-title: Probleme laden fehlgeschlagen
+    get_supported_problems-description: Beim Laden der unterstützten Probleme ist ein Fehler aufgetreten.
+    get_workstation_state-title: Arbeitsplatz status konnte nicht geladen werden
+    get_workstation_state-description: Beim Laden des Arbeitsplatz status ist ein Fehler aufgetreten.
+    get_load_carriers-title: Container Daten laden fehlgeschlagen
+    get_load_carriers-description: Beim Laden der Container Daten ist ein Fehler aufgetreten.
+    get_task-title: Aufgabe laden fehlgeschlagen
+    get_task-description: Beim Laden der Aufgabe ist ein Fehler aufgetreten.
+    get_robot_state-title: Roboter Status laden Fehlgeschlagen
+    get_robot_state-description: Beim Laden des Roboter Status ist ein Fehler aufgetreten.
+    change_task_execution_mode-title: Ausführungsmodus laden fehlgeschlagen
+    change_task_execution_mode-description: Beim Laden des Ausführungsmodus ist ein Fehler aufgetreten.
+    book_picking_task-title: Pick fehlgeschlagen
+    book_picking_task-description: Beim Buchen des Picking-Auftrages ist ein Fehler aufgetreten, bitte versuchen Sie es erneut.
+    book_consolidation_task-title: Verdichtung fehlgeschlagen
+    book_consolidation_task-description: Beim Buchen des Verdichtungs-Auftrages ist ein Fehler aufgetreten, bitte versuchen Sie es erneut.
+    book_cycle_count_task-title: Inventur fehlgeschlagen
+    book_cycle_count_task-description: Beim Buchen des Inventur-Auftrages ist ein Fehler aufgetreten, bitte versuchen Sie es erneut.
+    book_purge_and_recall_task_title: Säubern fehlgeschlagen
+    book_purge_and_recall_task_description: Beim Buchen des Säubern-Auftrages ist ein Fehler aufgetreten, bitte versuchen Sie es erneut.
+    verify_barcode-title: Barcode verifizierung fehlgeschlagen
+    verify_barcode-description: Beim Verifizieren des Barcodes ist ein Fehler aufgetreten.
+pcots-ext-api:
+  insufficient_permission:
+    get_supported_versions: Sie haben keine Berechtigung, die unterstützten Versionen zu laden.
+    get_supported_load_carrier_types: Sie haben keine Berechtigung, die Behältertypen zu laden.
+    change_load_carrier_type: Sie haben keine Berechtigung, um einen Container Typ zu verändern.
+    move_compartment: Sie haben keine Berechtigung, um einen Sektor zu verschieben.
+    swap_compartment: Sie haben keine Berechtigung, um einen Sektor zu vertauschen.
+    inventory_compartment: Sie haben keine Berechtigung, um eine inventur an einem Sektor durchzuführen.
+    transport_load_carrier: Sie haben keine Berechtigung, um einen Behälter zu transportieren.
+    identify_load_carrier: Sie haben keine Berechtigung, um einen Behälter zu identifizieren.
+    get_load_carrier_headers: Sie haben keine Berechtigung, um die Behälterdaten zu laden.
+    get_load_carrier_orders: Sie haben keine Berechtigung, um die Aufträge eines Behälters zu laden.
+  error_message:
+    get_supported_versions-title: Versionen laden fehlgeschlagen
+    get_supported_versions-description: Beim Laden der unterstützten Versionen ist ein Fehler aufgetreten.
+    get_supported_load_carrier_types-title: Behältertypen laden fehlgeschlagen
+    get_supported_load_carrier_types-description: Beim Laden der Behältertypen ist ein Fehler aufgetreten.
+    change_load_carrier_type-title: Behältertyp ändern fehlgeschlagen
+    change_load_carrier_type-description: Beim Ändern des Behältertypen ist ein Fehler aufgetreten.
+    move_compartment-title: Verschieben fehlgeschlagen
+    move_compartment-description: Beim Verschieben des Artikels ist etwas fehlgeschlagen, bitte versuchen Sie es erneut.
+    swap_compartment-title: Vertauschen fehlgeschlagen
+    swap_compartment-description: Beim Vertauschen der Artikel ist etwas fehlgeschlagen, bitte versuchen Sie es erneut.
+    inventory_compartment-title: Inventur fehlgeschlagen
+    inventory_compartment-description: Bei der Inventur des Artikels ist etwas fehlgeschlagen, bitte versuchen Sie es erneut.
+    transport_load_carrier-title: Behälter abschicken fehlgeschlagen
+    transport_load_carrier-description: Beim Abschicken des Behälters ist ein Fehler aufgetreten.
+    identify_load_carrier-title: Behälter identifizieren fehlgeschlagen
+    identify_load_carrier-description: Beim Identifizieren des Behälters ist ein Fehler aufgetreten.
+    get_load_carrier_headers-title: Behälterdaten laden fehlgeschlagen
+    get_load_carrier_headers-description: Beim Laden der Behälterdaten ist ein Fehler aufgetreten.
+    get_load_carrier_orders-title: Aufträge eines Behälters laden fehlgeschlagen
+    get_load_carrier_orders-description: Beim Laden der Aufträge eines Behälters ist ein Fehler aufgetreten.
+bfg-api:
+  insufficient_permission:
+    get_user_info: Sie haben keine Berechtigung, um die Benutzerinformationen zu laden.
+  error_message:
+    get_user_info-title: Benutzerinformationen laden fehlgeschlagen
+    get_user_info-description: Beim Laden der Benutzerinformationen ist ein Fehler aufgetreten.
+troubleshooting:
+  header:
+    report_problem: Problem melden
+    sub_heading: Bitte wählen Sie einen oder mehrere Gründe
+  footer:
+    save: Speichern
+    n_problems: '{n} Problem ausgewählt | {n} Probleme ausgewählt'
+  tabs:
+    n_problems_selected: 'Kein Problem ausgewählt | 1 Problem ausgewählt | {n} Probleme ausgewählt'
+    source: Quelle
+    task: Sonstiges
+    target: Ziel
+    problem_name:
+      DirtyLoadCarrier: Verschmutzter Behälter
+      DamagedLoadCarrier: Beschädigter Behälter
+      DirtyItem: Verschmutzter Artikel
+      DamagedItem: Beschädigter Artikel
+      WrongItem: Falscher Artikel
+      MissingQuantity: Falsche Stückzahl
+      ItemToLarge: Falsche größe
+      WrongDimensionData: Falsche Dimensionen
+      ItemBarcodeNotReadable: Artikel Barcode nicht lesbar
+      OtherItemDamaged: Anderer Artikel beschädigt
+      SectionMismatch: Falsche Sektorierung
+      TargetFull: Zielbehälter voll
+  loadcarrier: Behälter
+  item: Artikel
+  order: Auftrag
+  no_problem_available: Keine Probleme zur Auswahl
+  no_problem_available-description: Kontaktieren Sie einen Administrator wenn etwas fehlt
+scan-modification-view:
+  header_text: Scans bearbeiten
+  header_description: Scans manuell erstellen und löschen
+  confirm: Bestätigen
+  delete_scan: Scan löschen
+  create_scan: Scan erstellen
+  no_scans: Keine Scans gefunden
+scan-footer:
+  create_scan: Scan erstellen
+  delete_scan: Scan löschen
+station-selection:
+  select_station: Station auswählen
+  filter_stations: Stationen filtern
+  continue: Fortsetzen
+  back_to_login: Zurück zum Login
+leave-page-dialog:
+  title: Zurückgehen ohne zu speichern?
+  description: Sie haben ungespeicherte Änderungen.[new_line]Wenn Sie zurückgehen, werden diese Änderungen nicht übernommen.
+  cancel: Abbrechen
+  go_back: Zurückgehen
+item-scan-failed-dialog:
+  title: Artikel scan falsch
+  description: Der zuletzt gescannte Barcode stimmt nicht mit dem erwarteten Artikel überein. Bitte scannen Sie den richtigen Artikel oder melden Sie ein Problem, falls der Barcode ungültig ist.
+  ok: Ok
+create-scan-dialog:
+  create_scan: Scan erstellen
+  continue: Weiter
+  cancel: Abbrechen
+  error_message: 'Die eingegebene {0} Nummer stimmt nicht mit dem erwarteten Artikel überein.'
+  error_message_field: 'Der eingegebene {0} gehört nicht zum erwarteten Artikel.'
+workstation-selection-view:
+  station_not_supported: Diese App wird für Ihre Station nicht unterstützt.
+  warning: Warnung
+scan-hint-dialog:
+  cancel: Abbrechen
+  confirm: Bestätigen
+  delete_header: Scan löschen
+  create_header: Scan erstellen
+  source: Quellbehälter
+  source_sector: Quellbehälters
+  source_desc: Quellbehälter
+  target: Zielbehälter
+  target_sector: Zielbehälters
+  target_desc: Zielbehälter
+  item: Artikel
+  create_scan_sector_description: Bitte legen Sie folgende Artikel in den gezeigten Sektor des
+  create_scan_description: Bitte legen Sie folgende Artikel zurück in den
+  delete_scan_sector_description: Bitte legen Sie folgenden Artikel zurück in den gezeigten Sektor des
+  delete_scan_description: Bitte legen Sie folgende Artikel zurück in den
+load-carrier-details:
+  source: Quellbehälter
+  target: Zielbehälter
+  compartment: '{n} Sektoren | {n} Sektor | {n} Sektoren'
+  item: '{n} Artikel | {n} Artikel | {n} Artikel'
+  item_type: '{n} Artikeltypen | {n} Artikeltyp | {n} Artikeltypen'
+  show_target: Zielbehälter anzeigen
+  show_source: Quellbehälter anzeigen
+load-carrier-item-details:
+  header_text: Artikeldetails
+  item_name: Artikelname
+  compartment: Sektor
+  item_number: Artikelnummer
+  gtins: GTINS
+  quantity: Menge
+  weight: Gewicht
+  item_description: Artikelbeschreibung
+  no_items_compartment: Keine Artikel in diesem Sektor
+  no_items_loadcarrier: Keine Artikel in diesem Behälter
+notifications:
+  error: Fehler
+axios_errors:
+  error: Fehler
+  network_error: Ein Netzwerkfehler ist aufgetreten, bitte überprüfen Sie Ihre Netzwerkverbindung und probieren Sie es erneut.
+quantity_input:
+  enter_a_number: Bitte geben Sie eine Zahl ein.
+  validation_error_min: Menge kann nicht kleiner als {min} sein.
+  validation_error_max: Menge kann nicht größer als {max} sein.
+message-box:
+  cancel: Abbrechen
+  confirm: Bestätigen
+  ok: OK
+cycle-count-input:
+  quantity_input_title: Gezählte Menge eingeben
+advanced-cycle-count-view:
+  show_target: Zielbehälter anzeigen
+  show_source: Quellbehälter anzeigen
+  source_load_carrier: Quellbehälter
+  target_load_carrier: Zielbehälter
+  header_text: '- #{0}'
+  items_counted: 'Keine Artikel gezählt | {n} Artikel gezählt | {n} Artikel gezählt'
+  item_types_counted: 'Keine Artikeltypen gezählt | {n} Artikeltyp gezählt | {n} Artikeltypen gezählt'
+advanced-cycle-count-tabs:
+  counted: Gezählt
+  scanned: Gescannt
+  item_type_details: Artikeltypen details
+advanced-cycle-count-footer:
+  delete_scan: Scan löschen
+  delete_count: Zählung löschen
+delete-count-message-box:
+  delete_count_title: Diese Zählung löschen?
+  delete_count_description: Diese Aktion löscht die selektierte Zählung.;Der Artikel kann erneut im Hauptmenü gezählt werden.
+  delete: Zählung löschen
+not_counted:
+  not_counted: Bitte zählen Sie die Artikel zuerst um die Details anzuzeigen
+item-recount-required-dialog:
+  title: Artikelzählung erforderlich
+  description1: Aus Sicherheitsgründen ist eine Nachzählung erforderlich.
+  description2: Bitte zählen Sie die Artikel noch einmal.
+  ok: Ok
+item-recount-mismatch-dialog:
+  title: Artikelnachzählung fehlerhaft
+  description: Die zuletzt gezählte Menge stimmt nicht mit der vorherigen überein. Bitte zählen Sie die Artikel noch einmal.
+  confirm: Bestätigen
+recount-title:
+  text: Artikelnachzählung
+robot-instruction-view:
+  move_monitor: 'Monitor [highlighted]verschieben[/highlighted]'
+  leave_station: 'Station [highlighted]verlassen[/highlighted]'
+  press_buttons: 'Schaltflächen [highlighted]drücken[/highlighted]'
+  continue_robot_picking: '[highlighted]Roboter picken fortfahren[/highlighted]'
+rovoflex-footer:
+  picking_header: Roboter kommissioniert
+  picking_description: Bitte außerhalb in der Sicherheitszone bleiben
+  error_header: Roboter hat gestoppt
+  error_description: Warten auf manuelles Fehlerhandling
+rovoflex-switch-header:
+  rovoflex_picking: 'Wechseln zu [highlighted]Roboter picken[/highlighted]'
+  manual_picking: 'Wechseln zu [highlighted]Manuellem picken[/highlighted]'
+rovoflex-tap-to-continue:
+  tap_to_continue: 'Bildschirm [highlighted]berühren[/highlighted] um fortzufahren'
+rovoflex-problem-dialog:
+  ok: OK
+  press_ok_and_finish_pick: Bitte drücken Sie OK und beenden Sie den Pick manuell.
+  n_problems_occurred: '[highlighted]{n}[/highlighted] Fehler aufgetreten'
+  complete_pick_manually: Pick manuell abschließen
+  handle_possible_problems: Bitte beheben Sie mögliche Probleme, bevor Sie den Roboter in die Ausgangsposition bewegen.
+rovoflex-errors:
+  SourcePerceptionAborted_title: Quellerkennung abgebrochen
+  SourcePerceptionAborted_description: Konnte keine Artikel in der Quelle erkennen.
+  TargetPerceptionAborted_title: Zielerkennung abgebrochen
+  TargetPerceptionAborted_description: Kein freies Volumen im Ziel erkannt, um den Artikel abzulegen bzw. abzuwerfen. Es wurde kein Artikel aus der Quelle entnommen.
+  SourceEmpty_title: Quelle leer
+  SourceEmpty_description: Konnte keinen Artikel in der Quelle erkennen, da die Quelle leer ist.
+  ItemStuckOnGripper_title: Artikel steckt auf Greifer fest
+  ItemStuckOnGripper_description: Nachdem der Artikel in den Zielbehälter abgelegt werden sollte, haben die Sensoren festgestellt, dass sich noch ein Artikel auf dem Greifer befindet.
+  UnknownMovementError_title: Unbekannter Bewegungsfehler
+  UnknownMovementError_description: Die Bewegung des Roboters wurde unerwartet gestoppt, z.B. weil der Greifer mit einem Objekt kollidierte.
+  RobotPlcError_title: Plc Roboter Error
+  RobotPlcError_description: Error im Roboter Controller, z.B. weil der Greifer mit einem Objekt kollidiert ist.
+  NoCollisionFreeConfigFound_title: Keine kollisionsfreie Konfiguration gefunden
+  NoCollisionFreeConfigFound_description: Es wurde ein Artikel in der Quelle erkannt aber es konnte keine kollisionsfreie Konfiguration gefunden werden um den Artikel sicher zu greifen.
+  ItemLost_title: Artikel verloren
+  ItemLost_description: Ein Artikel ging während des Ablegevorgangs verloren.
+  SourceOverheight_title: Überhöhe in der Quelle
+  SourceOverheight_description: Nach Abschluss des Auftrags wurde eine Überhöhe in der Quelle erkannt.
+  TargetOverheight_title: Überhöhe im Ziel
+  TargetOverheight_description: Nach Abschluss des Auftrags wurde eine Überhöhe im Ziel erkannt.
+  TargetFull_title: Ziel voll
+  TargetFull_description: Der Artikel kann nicht in das Ziel abgelegt werden, da dies zu einer Überhöhe führen würde.
+  SourceNotFound_title: Quelle nicht gefunden
+  SourceNotFound_description: Die Quelle konnte nicht erkannt werden.
+  TargetNotFound_title: Ziel nicht gefunden
+  TargetNotFound_description: Das Ziel konnte nicht erkannt werden.
+  SourceNotOnPosition_title: Quelle nicht an erwarteter Position
+  SourceNotOnPosition_description: Die Quelle wurde erkannt, befindet sich jedoch nicht an der erwarteten Position.
+  TargetNotOnPosition_title: Ziel nicht an erwarteter Position
+  TargetNotOnPosition_description: Das Ziel wurde erkannt, befindet sich jedoch nicht an der erwarteten Position.
+  PickedTooMany_title: Zu viele Artikel aufgenommen
+  PickedTooMany_description: Es wurden mehr Artikel in das Ziel abgelegt als angefordert.
+  SafetyStop_title: Sicherheitsstopp
+  SafetyStop_description: Der Auftrag wurde aufgrund eines Sicherheitsstopps nicht abgeschlossen.
+  OrderCancelled_title: Auftrag storniert
+  OrderCancelled_description: Der Auftrag wurde manuell storniert.
+  PrepickOrderCancelled_title: Vorbereitender Auftrag storniert
+  PrepickOrderCancelled_description: Der vorbereitende Auftrag wurde manuell storniert.
+  UnknownOrderState_title: Unbekannter Auftragsstatus
+  UnknownOrderState_description: Der aktuelle Status des Auftrags ist unbekannt.
+  OrderError_title: Auftrag fehlgeschlagen
+  OrderError_description: Ein Auftrag wurde mit Fehler abgeschlossen, ein manueller Eingriff ist erforderlich.
+  LostPlcConnection_title: Verbindung zur SPS verloren
+  LostPlcConnection_description: Der IPC hat die Verbindung zur SPS verloren.
+  LostCameraConnection_title: Verbindung zur Kamera verloren
+  LostCameraConnection_description: Der IPC hat die Verbindung zur Kamera verloren.
+  SafetyStopActive_title: Sicherheitsstopp aktiv
+  SafetyStopActive_description: Der Sicherheitsstopp ist aktiv.
+  GraspingFailure_title: Greiferfehler
+  GraspingFailure_description: Der Roboter konnte den Gegenstand im Quellbehälter nach mehreren Versuchen nicht greifen.
+  HandlingFailure_title: Handhabungsfehler
+  HandlingFailure_description: Der Roboter konnte den gegriffenen Gegenstand während des Transports vom Quell- zum Zielbehälter nach mehreren Versuchen nicht ordnungsgemäß handhaben.
+  MultiPickFailure_title: Fehlgriff
+  MultiPickFailure_description: Der Roboter hat nach mehreren Versuchen mehr Gegenstände gegriffen als erlaubt.
+rovoflex-messages:
+  rovoflex_picking_requested_title: Roboter picken angefordert
+  rovoflex_picking_requested_text: Die Station wechselt zum Roboter Modus nach diesem Pick
+  rovoflex_manual_picking_requested_title: Manuelles picken angefordert
+  rovoflex_manual_picking_requested_text: Die Station wechselt zum manuellen Modus nach diesem Pick
+  rovoflex_robotic_picking_paused_title: Roboter picken pausiert
+  rovoflex_robotic_picking_paused_text: Schließen Sie den Pick manuell ab und verlassen Sie die Sicherheitszone
+  rovoflex_manual_mode_switch_title: Arbeitsplatz-Modus wechsel
+  rovoflex_manual_mode_switch_text: Schließen Sie den Pick manuell ab. Anschließend wechselt die Station in den manuellen Modus.
+undo-split-pick-message-box:
+  undo_split_pick_title: Gesplitteten pick aufheben?
+  undo_split_pick_description: Der Originalzustand dieses Picks wird wiederhergestellt. Sie können danach den Pick erneut splitten.
+workstation-inactive-view:
+  inactive: Inaktiv
+switch-to-robot-mode-dialog:
+  switch_to_robot_mode: Wechseln zu Robotermodus
+  description1: Wollen Sie wirklich in den Robotermouds wechseln?
+  description2: Der Wechsel findet nach Abschluss des aktuellen Picks statt.
+  switch: Wechseln
+  cancel: Abbrechen
+move-robot-to-home-view:
+  problem_occurred: Problem aufgetreten
+  reset_robot_position: Roboterposition zurücksetzen [highlighted][/highlighted]
+  press_ack: '[highlighted]ACK[/highlighted] Schaltfäche drücken'
+  long_press_ack: '[highlighted]ACK lange drücken[/highlighted]'
+app-container-menu-items:
+  switch_station: Station wechseln
+  switch_robot_mode: Zu Robotermodus wechseln
+  exit_robot_mode: Robotermodus beenden
+app-container-sub-text:
+  station: 'Station {0}'
+load-carrier-details-switch:
+  item_details: Artikeldetails
+  order_lines: Auftragspositionen
+load-carrier-details-order-lines:
+  order_lines_target: Aufträge, die in den Behälter kommissioniert werden
+  order_lines_source: Aufträge, die von diesem Behälter aus kommissioniert werden
+  col_order_id: Auftrags ID
+  col_order_description: Auftragsbeschreibung
+  col_item_id: Artikel ID
+  col_item_image: Artikelbild
+  col_item_description: Artikelbeschreibung
+  col_quantity: Menge
+  col_quantity_unit: Mengeneinheit
+  col_compartment_id: Sektor ID
+unknown-item-message-box:
+  unknown_item_title: Artikel konnte nicht identifiziert werden
+  unknown_item_description: Der Behälter fährt nach dem Bestätigen zur NiO Station. Behandle ihn wie einen normalen Artikel und lege ihn in den Sektor.
+scan-details:
+  unknown_item_type: Unbekannter Artikel
+  unknown_item_description: Der Artikeltyp konnte nicht erkannt werden. Behandle ihn wie jeden anderen Artikel und lege ihn in den entsprechenden Sektor.
+unknown-item:
+  description: 'Unbekannter Artikel {itemCount}'
+robot-mode-step-chip:
+  monitor_pos_error: Monitor nicht in Position
+  monitor_pos_ok: Monitor in Position
+enter-robot-monitor-step:
+  move_monitor: 'Monitor [highlighted]verschieben[/highlighted]'

@@ -1,0 +1,17 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: {{ .Values.deployment.name }}
+  namespace: {{ .Values.global.namespace }}
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: {{ .Values.deployment.image_version }}
+      from:
+        kind: DockerImage
+        name: '{{ .Values.deployment.name }}:{{ .Values.deployment.image_version }}'
+      importPolicy:
+        scheduled: true # use automatic update mechanism here
+      referencePolicy:
+        type: Local

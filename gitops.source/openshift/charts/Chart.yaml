@@ -1,0 +1,17 @@
+#main chart file with dependencies to
+apiVersion: v2
+name: PCO
+description: Pick Center One ADP configuration
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+dependencies:
+  - name: tgw-oauth-gateway
+    version: "1.1.0"
+    repository: "file://charts/gateway"
+  - name: tgw-pcots
+    version: "1.0.0"
+    repository: "file://charts/frontend"
+  - name: fluentd
+    version: "1.0.0"
+    repository: "file://charts/fluentd"

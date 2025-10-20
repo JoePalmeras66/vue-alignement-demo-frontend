@@ -1,0 +1,42 @@
+apiVersion: v1
+data:
+  password: NnR2MlBaOGs5WkQ1N3E5Q1FmbWU=
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: postgres_pass
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgresbfg
+spec:
+  containers:
+    - name: postgresbfg
+      image: postgres:13.2
+      imagePullPolicy: ifNotPresent
+      resources:
+        limits:
+          memory: 1Gi
+      securityContext: {}
+      ports:
+        - containerPort: 5432
+          hostPort: 5433
+      env:
+        - name: POSTGRES_DB
+          value: bfg
+        - name: POSTGRES_USER
+          value: bfg
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres_pass
+              key: password
+      volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: postgresbfg-data
+  volumes:
+    - name: postgresbfg-data
+      persistentVolumeClaim:
+        claimName: postgresbfg-data-db
+  restartPolicy: Never

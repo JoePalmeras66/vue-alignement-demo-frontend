@@ -1,0 +1,37 @@
+version: '3'
+services:
+  bfg:
+    # DEVELOPMENT image is used to allow self signed certificates
+    image: tgwsoftwarecontainerregistry.azurecr.io/tgw-bfg-dev:3.3.1-r00071
+    container_name: bfg
+    restart: always
+    depends_on:
+      - postgresbfg
+    environment:
+      JWT_AUTHORITY: https://g003pcopodmn01:8080/auth/realms/UI-UX
+      JWT_AUDIENCE: werx
+      VALIDATE_TOKEN: "false"
+      DATABASE_PROVIDER: Postgres
+      DATABASE_AUTOMIGRATE: "true"
+      USE_SERILOG: "false"
+      DATABASE_HOST: postgresbfg
+      DATABASE_PORT: "5432"
+      DATABASE_NAME: "bfg"
+      DATABASE_USERNAME: "bfg"
+      DATABASE_POOLSIZE: "10"
+      DATABASE_TIMEOUT: "0"
+    secrets:
+      - DATABASE_PASSWORD
+      - JWT_SECRET
+    networks:
+      - interConNet
+
+secrets:
+  DATABASE_PASSWORD:
+    external: true #connection has to be created first
+  JWT_SECRET:
+    external: true # Keycloak client secret which is used so sign the JSON web token
+
+networks:
+  interConNet:
+    external: true

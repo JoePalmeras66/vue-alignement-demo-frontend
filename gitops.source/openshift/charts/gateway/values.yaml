@@ -1,0 +1,5 @@
+deployment:
+  image_version: 1.1.0-r00123
+  name: tgw-oauth-gateway
+  configmap_name: gateway-configmap
+  domain: DOMAIN

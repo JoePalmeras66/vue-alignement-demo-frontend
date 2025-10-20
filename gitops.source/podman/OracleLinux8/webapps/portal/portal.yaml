@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: portal
+spec:
+  containers:
+    - name: portal
+      image: tgwsoftwarecontainerregistry.azurecr.io/products/portal/frontend:3.1.0
+      imagePullPolicy: ifNotPresent
+      resources:
+        limits:
+          memory: 1Gi
+      securityContext: {}
+      ports:
+        - containerPort: 8080
+          hostPort: 8081
+      env:
+        - name: VITE_APP_BFG_URL
+          value: https://c022podfat0101.tgwdev.internal
+        - name: VITE_APP_I18N_LOCALE
+          value: en
+        - name: VITE_APP_I18N_FALLBACK_LOCALE
+          value: de
+        - name: VITE_APP_LOGGER_SERVICE
+          value: https://c022podfat0101.tgwdev.internal/app-container
+  restartPolicy: Never

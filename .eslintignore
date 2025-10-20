@@ -1,0 +1,6 @@
+src/assets/animations/lottie/*.json
+src/helpers/testDataProvider.ts
+gitops.source/openshift/_sample/templates/*.yaml
+**/*.yaml
+**/*.yml
+cve-database

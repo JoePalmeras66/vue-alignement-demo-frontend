@@ -1,0 +1,11 @@
+apiVersion: v2
+name: tgw-pcots
+description: The PCO frontend application
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+maintainers:
+  - email: tobias.spatt@tgw-group.com
+    name: Tobias Spatt
+  - email: christoph.eibensteiner@tgw-group.com
+    name: Christoph Eibensteiner

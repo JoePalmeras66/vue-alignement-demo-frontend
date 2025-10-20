@@ -1,0 +1,41 @@
+# This pipeline checks if all unit tests can be executed without an error
+# and if the project can be build
+
+trigger:
+  - master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: 20.x
+    displayName: Install Node.js
+
+  - task: npmAuthenticate@0.238.2
+    displayName: Authenticate TgwUiComponents Feed
+    inputs:
+      workingFile: .npmrc
+      customEndpoint: TgwUiComponents-Feed
+
+  - script: |
+      npm install --prefer-offline --no-audit
+    displayName: Execute npm install
+    retryCountOnTaskFailure: 10
+
+  - script: |
+      npm run lint
+    displayName: Check source code syntax
+
+  - script: |
+      npm run type-check
+    displayName: Check TypeScript types with tsc
+
+  - script: |
+      npm run test:unit
+    displayName: Execute unit tests
+
+  - script: |
+      npm run build-only
+    displayName: Try to build project

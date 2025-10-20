@@ -1,0 +1,274 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ .Values.deployment.configmap_name }}
+  namespace: {{ .Values.global.namespace }}
+data:
+  TGW_OAUTH_GATEWAY: |-
+    {
+      "Gateway": {
+        "SessionTimeoutInMin": "720",
+        "Url": "http://+:8080",
+        "TokenExchangeStrategy": "default",
+        "RazorRootPath": "/gateway",
+        "LoginRedirectUri": "/signin-oidc",
+        "UseIdTokenHintLogout": "true",
+        "UseSerilog": "false",
+        "RedirectToHttps": "true",
+        "AllowedOrigins": "ORIGINS",
+        "AllowedRemotes": "KEYCLOAKDOMAIN PCODOMAIN"
+      },
+      "Apis": [
+        {
+          "ApiPath": "/",
+          "ApiAudience": "KEYCLOAKCLIENT"
+        }
+      ],
+      "OpenIdConnect": {
+        "Authority": "https://KEYCLOAKDOMAIN",
+        "Realm": "KEYCLOAKREALM",
+        "ClientId": "KEYCLOAKCLIENT",
+        "ClientSecret": "KEYCLOAKCLIENTSECRET",
+        "Scopes": "openid profile email",
+        "TraceRestCommunication": "true",
+        "GatewayUrl": "http://localhost:8080/",
+        "QueryUserInfoEndpoint": "false",
+        "SaveTokens": "true"
+      },
+      "Logging": {
+        "LogLevel": {
+          "Default": "Debug",
+          "Microsoft": "Debug",
+          "Microsoft.Hosting.Lifetime": "Debug"
+        }
+      },
+      "AllowedHosts": "*",
+      "DefaultLinks": [
+        {
+          "Link": "/",
+          "Description": "TGW Digital Services Portal - &#x1F697; Open the TGW Portal."
+        }
+      ],
+      "ReverseProxy": {
+        "Routes": {
+          "webRoute": {
+            "ClusterId": "appCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "/{**remainder}"
+            }
+          },
+          "appRoute": {
+            "ClusterId": "bfgCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "App/{**remainder}"
+            }
+          },
+          "authorizationRoute": {
+            "ClusterId": "bfgCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "Authorization/{**remainder}"
+            }
+          },
+          "dashboardRoute": {
+            "ClusterId": "bfgCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "Dashboard/{**remainder}"
+            }
+          },
+          "userRoute": {
+            "ClusterId": "bfgCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "User/{**remainder}"
+            }
+          },
+          "widgetRoute": {
+            "ClusterId": "bfgCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "Widget/{**remainder}"
+            }
+          },
+          "swaggerRoute": {
+            "ClusterId": "bfgCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "swagger/{**remainder}"
+            }
+          },
+          "pcotsUiRoute": {
+            "ClusterId": "pcotsCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "ui/pcots/{**remainder}"
+            },
+            "Transforms": [
+              {
+                "PathPattern": "/{**remainder}"
+              }
+            ]
+          },
+          "pcotsLogRoute": {
+            "ClusterId": "loggerCluster",
+            "AuthorizationPolicy": "authPolicy",
+            "Match": {
+              "Path": "pcots-logs/{**remainder}"
+            }
+          },
+          "wmRoute": {
+            "ClusterId": "wmCluster",
+            "Match": {
+              "Path": "wm/{**remainder}"
+            }
+          },
+          "pcotsWSRoute": {
+            "ClusterId": "pcotsWS001Cluster",
+            "Match": {
+              "Path": "pcots/supportedversions"
+            },
+            "Transforms": [
+              {
+                "PathPattern": "ui/supportedversions"
+              }
+            ]
+          },
+          "pcotsWS001Route": {
+            "ClusterId": "pcotsWS001Cluster",
+            "Match": {
+              "Path": "pcots/v1/WS001/{**remainder}"
+            },
+            "Transforms": [
+              {
+                "PathPattern": "ui/v1/{**remainder}"
+              }
+            ]
+          },
+          "pcotsWS001WsRoute": {
+            "ClusterId": "pcotsWS001Cluster",
+            "Match": {
+              "Path": "Pcots/v1/1/{**remainder}"
+            },
+            "Transforms": [
+              {
+                "PathPattern": "ui/v1/{**remainder}"
+              }
+            ]
+          },
+          "pcotsWS002Route": {
+            "ClusterId": "pcotsWS002Cluster",
+            "Match": {
+              "Path": "pcots/v1/WS002/{**remainder}"
+            },
+            "Transforms": [
+              {
+                "PathPattern": "ui/v1/{**remainder}"
+              }
+            ]
+          },
+          "pcotsWS002WsRoute": {
+            "ClusterId": "pcotsWS002Cluster",
+            "Match": {
+              "Path": "Pcots/v1/2/{**remainder}"
+            },
+            "Transforms": [
+              {
+                "PathPattern": "ui/v1/{**remainder}"
+              }
+            ]
+          },
+          "pcotsWS001WsCoreRoute": {
+            "ClusterId": "pcotsWS001Cluster",
+            "Match": {
+              "Path": "Core/{**remainder}",
+              "QueryParameters": [
+                {
+                  "Name": "station",
+                  "Values": ["1"],
+                  "Mode": "Exact",
+                  "IsCaseSensitive": true
+                }
+              ]
+            },
+            "Transforms": [
+              {
+                "PathPattern": "Core/MessagingEvent"
+              }
+            ]
+          },
+          "pcotsWS002WsCoreRoute": {
+            "ClusterId": "pcotsWS002Cluster",
+            "Match": {
+              "Path": "Core/{**remainder}",
+              "QueryParameters": [
+                {
+                  "Name": "station",
+                  "Values": ["2"],
+                  "Mode": "Exact",
+                  "IsCaseSensitive": true
+                }
+              ]
+            },
+            "Transforms": [
+              {
+                "PathPattern": "Core/MessagingEvent"
+              }
+            ]
+          }
+        },
+        "Clusters": {
+          "appCluster": {
+            "Destinations": {
+              "destination1": {
+                "Address": "http://portal:8080/"
+              }
+            }
+          },
+          "bfgCluster": {
+            "Destinations": {
+              "destination1": {
+                "Address": "http://bfg:8000/"
+              }
+            }
+          },
+          "pcotsCluster": {
+            "Destinations": {
+              "destination1": {
+                "Address": "http://pco:8080/"
+              }
+            }
+          },
+          "loggerCluster": {
+            "Destinations": {
+              "destination1": {
+                "Address": "http://fluentd:8080/"
+              }
+            }
+          },
+          "wmCluster": {
+            "Destinations": {
+              "destination1": {
+                "Address": "http://WM/"
+              }
+            }
+          },
+          "pcotsWS001Cluster": {
+            "Destinations": {
+              "destination1": {
+                "Address": "http://STATION1/"
+              }
+            }
+          },
+          "pcotsWS002Cluster": {
+            "Destinations": {
+              "destination1": {
+                "Address": "http://STATION2/"
+              }
+            }
+          }
+        }
+      }
+    }

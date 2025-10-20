@@ -1,0 +1,88 @@
+# For documentation please check https://dev.azure.com/TGW-Software/Markdown2Confluence
+
+trigger:
+  - master
+
+parameters:
+  - name: USE_BRANCH_ID
+    type: string
+    displayName: Set Branch prefix
+    default: Automatic
+
+variables:
+  - group: markdown2confluence
+  - group: markdown2confluence-secrets
+
+pool: TGW
+
+workspace:
+  clean: all
+
+steps:
+  - checkout: self
+    displayName: Git checkout
+    lfs: true
+    fetchDepth: 2
+
+  - script: |
+      cp $(Build.SourcesDirectory)/README.md $(Build.SourcesDirectory)/docs
+      cp $(Build.SourcesDirectory)/CHANGELOG.md $(Build.SourcesDirectory)/docs
+    displayName: Copy Readme.md to docs folder
+
+  - script: |
+      mv $(Build.SourcesDirectory)/docs/README.md $(Build.SourcesDirectory)/docs/Entree.md
+      mv $(Build.SourcesDirectory)/docs/CHANGELOG.md $(Build.SourcesDirectory)/docs/Entree-Changelog.md
+    displayName: Move Readme.md to docs/Entree.md
+
+  - script: |
+      cp $(Build.SourcesDirectory)/images/* $(Build.SourcesDirectory)/docs/images
+    displayName: Copy all images of images folder to docs/images folder
+
+  - task: PowerShell@2
+    displayName: Set Docs Config
+    inputs:
+      pwsh: true
+      targetType: inline
+      script: |
+        $docs = "$(LOCAL-DOC-DIR)"
+        Write-Host "Lookup docs configuration"
+        Write-Host "  | From group : '$docs'"
+
+        if("$docs" -eq ""){
+          $docsDefault = "docs"
+          Write-Host "    | Not set - use default '$docsDefault'"
+          $docs = $docsDefault
+        }
+        Write-Host "##vso[task.setvariable variable=RESOLVEDDOCS;]$docs"
+
+  - task: PowerShell@2
+    displayName: Inject Header
+    inputs:
+      filePath: $(Build.SourcesDirectory)/md2confluence/md-write-header.ps1
+      arguments: -BranchId "${{parameters.USE_BRANCH_ID}}"
+      pwsh: true
+
+  - task: Docker@2
+    displayName: Login to docker container registry
+    inputs:
+      containerRegistry: TgwSoftwareContainerRegistry
+      command: login
+
+  - task: PowerShell@2
+    displayName: Upload Markdown files to Confluence Pwsh
+    inputs:
+      pwsh: true
+      targetType: inline
+      script: |
+        $mark = "tgwsoftwarecontainerregistry.azurecr.io/mark:latest"
+        $md2Path = $(Join-Path "$(Build.SourcesDirectory)" -ChildPath "md2confluence")
+        $docPath = $(Join-Path "$(Build.SourcesDirectory)" -ChildPath "$(RESOLVEDDOCS)")
+
+        # If we are on oel and running podman with the podman-docker-wrapper, we need to run the command priviledged, otherwise SELinux will block the entry-point from being executed.
+        $podmanInstalled = Get-Command podman -ErrorAction SilentlyContinue
+        if(! $IsWindows -and $podmanInstalled) {
+          $privileged = @("--privileged")
+        }
+
+        docker pull $mark
+        docker run @privileged --rm -i -v $($md2Path + ":/md2confluence") -v $($docPath + ":/docs") $mark /bin/bash /md2confluence/multiupload.sh $(CONFLUENCE-USERNAME) $(CONFLUENCE-PASSWORD) $(CONFLUENCE-ROOT-URL)

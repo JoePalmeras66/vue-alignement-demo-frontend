@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  portal:
+    image: tgwsoftwarecontainerregistry.azurecr.io/products/portal/frontend:3.0.1
+    container_name: portal
+    restart: always
+    environment:
+      VITE_APP_BFG_URL: https://g003pcopodmn01
+      VITE_APP_I18N_LOCALE: en
+      VITE_APP_I18N_FALLBACK_LOCALE: de
+    networks:
+      - interConNet
+
+networks:
+  interConNet:
+    external: true

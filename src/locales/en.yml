@@ -1,0 +1,472 @@
+empty: Empty
+info: Information
+success: Success
+warning: Warning
+error: Error
+pick-center-one-ts-view:
+  picking: Picking
+  consolidation: Consolidation
+  cyclecount: Cycle count
+  none: Workstation mode not set
+  messages:
+    zero_crossing: 'Is the compartment [highlighted]empty[/highlighted]?'
+  split_pick_title: Split Pick
+  inventory_title: Enter amount of items
+  move_title: Enter amount of items to move
+  compartment_empty: Compartment empty?
+  compartment_empty_description: Are you sure that there are no items in this compartment?
+  cancel: Cancel
+  confirm: Confirm
+  robotic_picking: Robotic picking
+  purgeandrecall: Purge and recall
+  step_picking: Pick and Put
+  step_picking_scan: Scan item
+  step_picking_rovoflex: Do not cross the safety area
+  step_cycle_count: Count
+  step_cycle_count_recount: Recount
+  step_purge_and_recall: Purge and Recall
+  step_consolidation: Pick and Put
+  step_consolidation_scan: Scan item
+  step_consolidation_action: Select a manual action
+  step_consolidation_inventory: Select one item type
+  step_consolidation_swap: Select the first sector
+  step_consolidation_swap_2: Select the second sector
+  step_consolidation_move: Select the items to move
+  step_consolidation_move_2: Select the target sector
+load-carrier:
+  no_transports: No open transports
+  waiting_for_load_carrier: Waiting for load carrier
+  reject: Reject
+  view_details: View Details
+  source: source
+  target: target
+  send_away_title: Send away load carrier
+  send_away_description_1: Are you sure you want to send away
+  send_away_description_2: load carrier
+  send_away_description_3: already?
+  cancel: Cancel
+  send_away: Send away
+  drive_through: Load carrier drive through
+  no_read: NOREAD
+convert-load-carrier-dialog:
+  cancel: Cancel
+  convert: Convert
+  source_load_carrier: source load carrier
+  target_load_carrier: target load carrier
+  convert_load_carrier_title: 'Convert {0}'
+  convert_load_carrier_description: Select the desired load carrier type.
+load-carrier-no-read:
+  load_carrier_no_read: Load carrier could not be read
+  enter_load_carrier_number: Enter load carrier number
+action-bar-texts:
+  confirm: Confirm
+  cancel: Cancel
+  send_to_reject: Send to Reject Station
+  report_problem: Report Problem
+  split_pick: Split Pick
+  undo_split: Undo Split
+  n_problems_saved: '{n} problem saved | {n} problems saved'
+  edit_scans: Edit Scans
+  undo_last_scan: Undo last Scan
+  send_target: Send Target
+  show_details: Show Details
+zero-crossing:
+  zero_crossing_empty_no: No
+  zero_crossing_empty_yes: Yes
+action-bar:
+  edit: Edit
+  robot_paused: Robot Paused
+  error_info: Error Info
+consolidation-action-bar:
+  mode_switch: Manual mode
+  inventory: Inventory
+  swap: Swap
+  move: Move
+  inventory_description: Select the compartment which you want to inventory
+  swap_description: Select the 2 compartments you want to swap
+  move_description: Select the compartment which you want to move
+  move_description2: Select the target compartment
+  send: Send
+cycle-count-action-bar:
+  advanced_view: Advanced view
+  create_scan: Create scan
+  confirm_and_send: Confirm & send
+  confirm_count: Confirm count
+  empty_compartment_message_box_title: Empty compartment
+  empty_compartment_message_box_description: No item count has been provided. [new_line]Is this compartment empty?
+item-image:
+  item_images: Item images
+  close: Close
+  no_photo_available: No photo available
+load-carrier-header:
+  source: Source
+  target: Target
+load-carrier-compartment:
+  pick: Pick
+  put: Put
+  count: Count
+  scan: Scan
+  recount: Recount
+wm-api:
+  insufficient_permission:
+    get_supported_stations: You do not have permissions to load the workstations.
+  error_message:
+    get_supported_stations-title: Loading workstations failed
+    get_supported_stations-description: An error occurred while trying to get the supported workstations.
+pcots-api:
+  insufficient_permission:
+    get_supported_versions: You do not have permission to get the supported versions.
+    get_supported_problems: You do not have permission to get the supported problems.
+    get_workstation_state: You do not have permission to get the workstation state.
+    get_load_carriers: You do not have permission to get the load carrier data.
+    get_task: You do not have permission to get the task data.
+    get_robot_state: You do not have permission to get the robot state.
+    change_task_execution_mode: You do not have permission to change the execution mode.
+    book_picking_task: You do not have permission to book a picking task.
+    book_consolidation_task: You do not have permission to book a consolidation task.
+    book_cycle_count_task: You do not have permission to book a cycle count task.
+    book_purge_and_recall_task: You do not have permission to book a purge and recall task.
+    verify_barcode: You do not have permission to verify a barcode.
+  error_message:
+    get_supported_versions-title: Loading supported versions failed
+    get_supported_versions-description: An error occurred while trying to get the supported versions.
+    get_supported_problems-title: Loading supported problems failed
+    get_supported_problems-description: An error occurred while trying to get the supported problems.
+    get_workstation_state-title: Loading workstation state failed
+    get_workstation_state-description: An error occurred while trying to get the workstation state.
+    get_load_carriers-title: Loading load carriers failed
+    get_load_carriers-description: An error occurred while trying to get the load carriers.
+    get_task-title: Loading task failed
+    get_task-description: An error occurred while trying to get the task.
+    get_robot_state-title: Loading robot state failed
+    get_robot_state-description: An error occurred while trying to get the robot state.
+    change_task_execution_mode-title: Changing task execution mode failed
+    change_task_execution_mode-description: An error occurred while trying to change the task execution mode.
+    book_picking_task-title: Pick failed
+    book_picking_task-description: There occurred a problem while trying to book the current picking task, please try again.
+    book_consolidation_task-title: Consolidation failed
+    book_consolidation_task-description: There occurred a problem while trying to book the current consolidation task, please try again.
+    book_cycle_count_task-title: Cycle count failed
+    book_cycle_count_task-description: There occurred a problem while trying to book the current cycle count task, please try again.
+    book_purge_and_recall_task_title: Purge and Recall failed
+    book_purge_and_recall_task_description: There occurred a problem while trying to book the current purge and recall task, please try again.
+    verify_barcode-title: Verifying barcode failed
+    verify_barcode-description: An error occurred while trying to verify the barcode.
+pcots-ext-api:
+  insufficient_permission:
+    get_supported_versions: You do not have permission to get the supported versions.
+    get_supported_load_carrier_types: You do not have permission to get the load carrier types.
+    change_load_carrier_type: You do not have permission to change the load carrier type.
+    move_compartment: You do not have permission to move a compartment.
+    swap_compartment: You do not have permission to swap a compartment.
+    inventory_compartment: You do not have permission to inventory a compartment.
+    transport_load_carrier: You do not have permission to transport a load carrier.
+    identify_load_carrier: You do not have permission to identify a load carrier.
+    get_load_carrier_headers: You do not have permissions to load the load carrier data.
+    get_load_carrier_orders: You do not have permissions to load the load carrier orders.
+  error_message:
+    get_supported_versions-title: Loading supported versions failed
+    get_supported_versions-description: An error occurred while trying to get the supported versions.
+    get_supported_load_carrier_types-title: Loading supported load carrier types failed
+    get_supported_load_carrier_types-description: An error occurred while trying to get the supported load carrier types.
+    change_load_carrier_type-title: Change load carrier type failed
+    change_load_carrier_type-description: An error occurred while trying to change the load carrier type.
+    move_compartment-title: Move failed
+    move_compartment-description: There occurred a problem while trying to move an item, please try again.
+    swap_compartment-title: Swap failed
+    swap_compartment-description: There occurred a problem while trying to swap the items, please try again.
+    inventory_compartment-title: Inventory failed
+    inventory_compartment-description: There occurred a problem while trying to book the inventory, please try again.
+    transport_load_carrier-title: Transport of load carrier failed
+    transport_load_carrier-description: An error occurred while trying to transport the load carrier.
+    identify_load_carrier-title: Identification of load carrier failed
+    identify_load_carrier-description: An error occurred while trying to identify the load carrier.
+    get_load_carrier_headers-title: Loading load carrier headers failed
+    get_load_carrier_headers-description: An error occurred while trying to get the load carrier headers.
+    get_load_carrier_orders-title: Loading load carrier orders failed
+    get_load_carrier_orders-description: An error occurred while trying to get the load carrier orders.
+bfg-api:
+  insufficient_permission:
+    get_user_info: You do not have permission to load the user information.
+  error_message:
+    get_user_info-title: Loading user info failed
+    get_user_info-description: An error occurred while trying to load the user info.
+troubleshooting:
+  header:
+    report_problem: Report problem
+    sub_heading: Please select one or more problems
+  footer:
+    save: Save
+    n_problems: '{n} Problem selected | {n} Problems selected'
+  tabs:
+    n_problems_selected: 'No problem selected | 1 problem selected | {n} problems selected'
+    source: Source
+    task: Others
+    target: Target
+    problem_name:
+      DirtyLoadCarrier: Dirty load carrier
+      DamagedLoadCarrier: Damaged load carrier
+      DirtyItem: Dirty item
+      DamagedItem: Damaged item
+      WrongItem: Wrong item
+      MissingQuantity: Wrong amount
+      ItemToLarge: Wrong size
+      WrongDimensionData: Wrong dimensions
+      ItemBarcodeNotReadable: Item barcode not readable
+      OtherItemDamaged: Other item damaged
+      SectionMismatch: Compartment mismatch
+      TargetFull: Target full
+  loadcarrier: Load Carrier
+  item: Item
+  order: Order
+  no_problem_available: No problem options available
+  no_problem_available-description: Get in touch with the administrator if you are missing something
+scan-modification-view:
+  header_text: Edit Scans
+  header_description: Manually create and delete scans
+  confirm: Confirm
+  delete_scan: Delete Scan
+  create_scan: Create Scan
+  no_scans: No Scans found
+scan-footer:
+  create_scan: Create Scan
+  delete_scan: Delete Scan
+station-selection:
+  select_station: Select your workstation
+  filter_stations: Filter stations
+  continue: Continue
+  back_to_login: Back to Login
+leave-page-dialog:
+  title: Go back without saving?
+  description: You have unsaved changes.[new_line]If you go back, these changes will not be applied.
+  cancel: Cancel
+  go_back: Go back
+item-scan-failed-dialog:
+  title: Item scan failed
+  description: The last scanned barcode doesn’t match the expected item. Please scan the correct item or report a problem if the barcode is invalid.
+  ok: Ok
+create-scan-dialog:
+  create_scan: Create Scan
+  continue: Continue
+  cancel: Cancel
+  error_message: 'The entered {0} number does not match the expected item.'
+  error_message_field: 'Entered {0} does not belong to the expected item.'
+workstation-selection-view:
+  station_not_supported: This app is not supported on your station.
+  warning: Warning
+scan-hint-dialog:
+  cancel: Cancel
+  confirm: Confirm
+  delete_header: Delete Scan
+  create_header: Create Scan
+  source: SOURCE
+  source_sector: source load carrier
+  source_desc: source load carrier
+  target: TARGET
+  target_sector: target load carrier
+  target_desc: target load carrier
+  item: Item
+  create_scan_sector_description: Please put the following item into the marked sector of the
+  create_scan_description: Please put the following item into the
+  delete_scan_sector_description: Please put the following item back into the marked sector of the
+  delete_scan_description: Please put the following item back into the
+load-carrier-details:
+  source: Source load carrier
+  target: Target load carrier
+  compartment: '{n} Compartments | {n} Compartment | {n} Compartments'
+  item: '{n} Items | {n} Item | {n} Items'
+  item_type: '{n} Item types | {n} Item type | {n} Item types'
+  show_target: Show target lc
+  show_source: Show source lc
+load-carrier-item-details:
+  header_text: Item details
+  item_name: Item name
+  compartment: Compartment
+  item_number: Item number
+  gtins: GTINS
+  quantity: Quantity
+  weight: Weight
+  item_description: Item description
+  no_items_compartment: No items in this compartment
+  no_items_loadcarrier: No items in this load carrier
+notifications:
+  error: Error
+axios_errors:
+  error: Error
+  network_error: Network error occured, please check your network connection and try again.
+quantity_input:
+  enter_a_number: Please enter a number.
+  validation_error_min: Number can not be lower than {min}.
+  validation_error_max: Number can not be bigger than {max}.
+message-box:
+  cancel: Cancel
+  confirm: Confirm
+  ok: OK
+cycle-count-input:
+  quantity_input_title: Enter counted items
+advanced-cycle-count-view:
+  show_target: Show target lc
+  show_source: Show source lc
+  source_load_carrier: Source load carrier
+  target_load_carrier: Target load carrier
+  header_text: '- #{0}'
+  items_counted: 'No items counted | {n} item counted | {n} items counted'
+  item_types_counted: 'No item types counted | {n} item type counted | {n} item types counted'
+advanced-cycle-count-tabs:
+  counted: Counted
+  scanned: Scanned
+  item_type_details: Item type details
+advanced-cycle-count-footer:
+  delete_scan: Delete Scan
+  delete_count: Delete Count
+delete-count-message-box:
+  delete_count_title: Delete this count?
+  delete_count_description: This action will set the amount to 0.;You can modify the count later again from the Advanced View.
+  delete: Delete Count
+not_counted:
+  not_counted: Please count the items first to see the details
+item-recount-required-dialog:
+  title: Item recount required
+  description1: For security reasons a recount is required.
+  description2: Please, count the items again.
+  ok: Ok
+item-recount-mismatch-dialog:
+  title: Recount Mismatch
+  description: The recently counted amount does not match with the previous one. Please, count the items again.
+  confirm: Confirm
+recount-title:
+  text: Article Recount
+robot-instruction-view:
+  move_monitor: '[highlighted]Move[/highlighted] the monitor'
+  leave_station: '[highlighted]Leave[/highlighted] the station'
+  press_buttons: '[highlighted]Press[/highlighted] the buttons'
+  continue_robot_picking: '[highlighted]Continue robot picking[/highlighted]'
+rovoflex-footer:
+  picking_header: Robot is picking
+  picking_description: Please stay outside in the safe area
+  error_header: Robot has stopped
+  error_description: Waiting for manual troubleshooting
+rovoflex-switch-header:
+  rovoflex_picking: 'Switching to [highlighted]Robot picking[/highlighted]'
+  manual_picking: 'Switching to [highlighted]Manual picking[/highlighted]'
+rovoflex-tap-to-continue:
+  tap_to_continue: '[highlighted]Tap[/highlighted] the screen to continue'
+rovoflex-problem-dialog:
+  ok: OK
+  press_ok_and_finish_pick: Please press OK and finish the pick manually.
+  n_problems_occurred: '[highlighted]{n}[/highlighted] errors occurred'
+  complete_pick_manually: Complete pick manually
+  handle_possible_problems: Please handle possible problems before moving the robot to the home position.
+rovoflex-errors:
+  SourcePerceptionAborted_title: Source perception aborted
+  SourcePerceptionAborted_description: Could not detect items in source LC.
+  TargetPerceptionAborted_title: Target perception aborted
+  TargetPerceptionAborted_description: Could not detect a space in the target LC to place/drop the item. Did not pick any item out of the source LC.
+  SourceEmpty_title: Source empty
+  SourceEmpty_description: Could not detect an item in the source LC, because the LC is empty.
+  ItemStuckOnGripper_title: Item stuck on gripper
+  ItemStuckOnGripper_description: After trying to drop the item into the target tote, the sensors detected that there is still an item stuck on the gripper.
+  UnknownMovementError_title: Unknown movement error
+  UnknownMovementError_description: The robot's movement was stopped unexpectedly, e.g. because the gripper crashed into an object.
+  RobotPlcError_title: Robot Plc error
+  RobotPlcError_description: The robot controller is in error, e.g. because the gripper crashed into an object.
+  NoCollisionFreeConfigFound_title: No collision free config found
+  NoCollisionFreeConfigFound_description: An item has been detected in the source LC, but it can not be grasped collision-free.
+  ItemLost_title: Item lost
+  ItemLost_description: An item got lost during the dropping process.
+  SourceOverheight_title: Source overheight
+  SourceOverheight_description: An overheight was detected at the source LC after finalizing the order.
+  TargetOverheight_title: Target overheight
+  TargetOverheight_description: An overheight was detected at the target LC after finalizing the order.
+  TargetFull_title: Target full
+  TargetFull_description: The item can not be placed into the target LC because it would lead to overheight.
+  SourceNotFound_title: Source not found
+  SourceNotFound_description: The source LC could not be detected.
+  TargetNotFound_title: Target not found
+  TargetNotFound_description: The target LC could not be detected.
+  SourceNotOnPosition_title: Source not on position
+  SourceNotOnPosition_description: The source LC could be detected but it is not at the position where it is expected to be.
+  TargetNotOnPosition_title: Target not on position
+  TargetNotOnPosition_description: The target LC could be detected but it is not at the position where it is expected to be.
+  PickedTooMany_title: Picked too many
+  PickedTooMany_description: More items have been put into the target LC than requested.
+  SafetyStop_title: Safety stop
+  SafetyStop_description: The order was not finished because of a safety stop.
+  OrderCancelled_title: Order cancelled
+  OrderCancelled_description: The order has been cancelled manually.
+  PrepickOrderCancelled_title: Prepick order cancelled
+  PrepickOrderCancelled_description: The prepick order has been cancelled manually.
+  UnknownOrderState_title: Unknown order state
+  UnknownOrderState_description: The current state of the order is unknown.
+  OrderError_title: Order failed
+  OrderError_description: An order has been completed with an error that needs manual intervention.
+  LostPlcConnection_title: Lost connection to PLC
+  LostPlcConnection_description: The IPC lost connection to the PLC.
+  LostCameraConnection_title: Camera connection lost
+  LostCameraConnection_description: The IPC lost connection to the camera.
+  SafetyStopActive_title: Safety stop active.
+  SafetyStopActive_description: The safety stop is active.
+  GraspingFailure_title: Grasp failure
+  GraspingFailure_description: Robot could not grasp the item in the source load carrier after multiple trials.
+  HandlingFailure_title: Handling failure
+  HandlingFailure_description: Robot could not handle the grasped item properly during the transport from the source to the target load carrier after multiple trials.
+  MultiPickFailure_title: Multipick failure
+  MultiPickFailure_description: Robot grasped more items than allowed after multiple trials.
+rovoflex-messages:
+  rovoflex_picking_requested_title: Robotic picking requested
+  rovoflex_picking_requested_text: The station switches to robot mode after this pick
+  rovoflex_manual_picking_requested_title: Manual picking requested
+  rovoflex_manual_picking_requested_text: The station switches to manual picking mode after this pick
+  rovoflex_robotic_picking_paused_title: Robotic picking paused
+  rovoflex_robotic_picking_paused_text: Finish the pick manually and then leave the safety zone.
+  rovoflex_manual_mode_switch_title: Workstation mode switch
+  rovoflex_manual_mode_switch_text: Finish the pick manually. The station will switch to manual mode afterwards.
+undo-split-pick-message-box:
+  undo_split_pick_title: Undo split pick?
+  undo_split_pick_description: This pick will be restored to its original state. You can then split the pick again.
+workstation-inactive-view:
+  inactive: Inactive
+switch-to-robot-mode-dialog:
+  switch_to_robot_mode: Switch to robot mode
+  description1: Do you really want to switch into the robot mode?
+  description2: The switch will take place after finishing the ongoing pick.
+  switch: Switch
+  cancel: Cancel
+move-robot-to-home-view:
+  problem_occurred: Problem occurred
+  reset_robot_position: Reset robot position [highlighted][/highlighted]
+  press_ack: 'Press [highlighted]ACK[/highlighted] button'
+  long_press_ack: '[highlighted]Long press ACK[/highlighted] button'
+app-container-menu-items:
+  switch_station: Change station
+  switch_robot_mode: Change to robot mode
+  exit_robot_mode: Exit robot mode
+app-container-sub-text:
+  station: 'Station {0}'
+load-carrier-details-switch:
+  item_details: Item details
+  order_lines: Order lines
+load-carrier-details-order-lines:
+  order_lines_target: Orders that are picked into this LC
+  order_lines_source: Orders that are picked from this LC
+  col_order_id: Order ID
+  col_order_description: Order description
+  col_item_id: Item ID
+  col_item_image: Item image
+  col_item_description: Item description
+  col_quantity: Quantity
+  col_quantity_unit: Quantity unit
+  col_compartment_id: Compartment ID
+unknown-item-message-box:
+  unknown_item_title: Item could not be identified
+  unknown_item_description: The load carrier will be sent to the reject station after you complete the cycle. Treat it as a normal item and place it in the corresponding sector.
+scan-details:
+  unknown_item_type: Unknown Item
+  unknown_item_description: The item type could not be detected. Treat it as any other item and put it in the corresponding load carrier sector.
+unknown-item:
+  description: 'Unknown Item {itemCount}'
+robot-mode-step-chip:
+  monitor_pos_error: Monitor not in position
+  monitor_pos_ok: Monitor in position
+enter-robot-monitor-step:
+  move_monitor: '[highlighted]Move[/highlighted] the monitor'

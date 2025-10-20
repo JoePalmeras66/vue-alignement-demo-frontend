@@ -1,0 +1,4 @@
+deployment:
+  image_version: latest
+  name: tgw-pcots-web
+  configmap_name: pcots-configmap

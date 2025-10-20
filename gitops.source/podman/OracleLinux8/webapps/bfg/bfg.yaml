@@ -1,0 +1,62 @@
+apiVersion: v1
+data:
+  password: ODg0ZTBmOTUtMGY0Mi00YTYzLTliMWYtOTQyNzQ2NTU2Njll
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: JWT_SECRET
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bfg
+spec:
+  containers:
+    - name: bfg
+      image: tgwsoftwarecontainerregistry.azurecr.io/products/portal/backend:3.3.2
+      imagePullPolicy: ifNotPresent
+      resources:
+        limits:
+          memory: 1Gi
+      securityContext: {}
+      ports:
+        - containerPort: 8000
+          hostPort: 8000
+      env:
+        - name: JWT_AUTHORITY
+          value: https://c022isredqa01.tgwdev.internal/auth/realms/INTERSPORT
+        - name: JWT_AUDIENCE
+          value: werx
+        - name: VALIDATE_TOKEN
+          value: "false"
+        - name: VALIDATE_SSL
+          value: "false"
+        - name: DATABASE_PROVIDER
+          value: Postgres
+        - name: DATABASE_AUTOMIGRATE
+          value: "true"
+        - name: USE_SERILOG
+          value: "false"
+        - name: DATABASE_HOST
+          value: c022podfat0101.tgwdev.internal
+        - name: DATABASE_PORT
+          value: "5433"
+        - name: DATABASE_NAME
+          value: bfg
+        - name: DATABASE_USERNAME
+          value: bfg
+        - name: DATABASE_POOLSIZE
+          value: "10"
+        - name: DATABASE_TIMEOUT
+          value: "0"
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres_pass
+              key: password
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: JWT_SECRET
+              key: password
+  restartPolicy: Never

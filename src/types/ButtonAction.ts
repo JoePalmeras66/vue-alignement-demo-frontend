@@ -1,0 +1,17 @@
+export enum ButtonAction {
+  confirm = 'confirm',
+  report_problem = 'report_problem',
+  zero_crossing_empty_yes = 'zero_crossing_empty_yes',
+  zero_crossing_empty_no = 'zero_crossing_empty_no',
+  edit_scans = 'edit_scans',
+  create_scan = 'create_scan',
+  split_pick = 'split_pick',
+  inventory = 'inventory',
+  swap = 'swap',
+  move = 'move',
+  cancel = 'cancel',
+  advanced_view = 'advanced_view',
+  error_info = 'error_info',
+  undo_last_scan = 'undo_last_scan',
+  show_details = 'show_details',
+}

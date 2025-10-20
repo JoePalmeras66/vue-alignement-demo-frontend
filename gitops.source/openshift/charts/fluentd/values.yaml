@@ -1,0 +1,4 @@
+deployment:
+  image_version: v1.14.0-1.0
+  name: fluentd
+  configmap_name: fluentd-configmap

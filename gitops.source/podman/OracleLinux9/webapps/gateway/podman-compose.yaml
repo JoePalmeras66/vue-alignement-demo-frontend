@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  gateway:
+    # DEVELOPMENT image is used to allow self signed certificates
+    image: 'tgwsoftwarecontainerregistry.azurecr.io/tgw-oauth-gateway:1.1.0-r00124'
+    container_name: gateway
+    restart: always
+    volumes:
+      - ./conf/appsettings.json:/app/appsettings.json:Z
+      - ../../certs/G003PCOPODMN01.crt:/app/fullchain.crt:Z
+      - ../../certs/G003PCOPODMN01.key:/app/privkey.key:Z
+    ports:
+      - target: 443
+        published: 443
+        mode: host
+    networks:
+      - interConNet
+
+networks:
+  interConNet:
+    external: true

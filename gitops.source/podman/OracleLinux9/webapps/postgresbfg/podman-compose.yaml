@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  postgresbfg:
+    image: docker.io/postgres:13.2
+    container_name: postgresbfg
+    restart: always
+    environment:
+      POSTGRES_DB: bfg
+      POSTGRES_USER: bfg
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_pass
+    volumes:
+      - ./postgres-data-bfg:/var/lib/postgresql/data:Z
+    secrets:
+      - postgres_pass
+    networks:
+      - interConNet
+      
+secrets:
+  postgres_pass:
+    external: true
+
+networks:
+  interConNet:
+    external: true

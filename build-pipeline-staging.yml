@@ -1,0 +1,50 @@
+trigger: none
+
+variables:
+  - group: build-variable-group
+
+pool:
+  vmImage: ubuntu-latest
+
+# format build variable Build.BuildNumbe to revision
+name: $(Rev:rrrrr)
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: 20.x
+    displayName: Install Node.js
+
+  - task: npmAuthenticate@0.238.2
+    displayName: Authenticate TgwUiComponents Feed
+    inputs:
+      workingFile: .npmrc
+      customEndpoint: TgwUiComponents-Feed
+
+  - script: |
+      npm install --prefer-offline --no-audit
+    displayName: Execute npm install
+    retryCountOnTaskFailure: 10
+
+  - script: |
+      npm version $(major).$(minor).$(patch)-r$(Build.BuildNumber) --no-git-tag-version
+    displayName: Set version number in package.json
+
+  - script: |
+      sed -i -e 's/APP_VERSION/$(major).$(minor).$(patch)-r$(Build.BuildNumber)/g' default.conf.template
+    displayName: Set version in nginx default.conf.template version endpoint
+
+  - script: |
+      npm run build-only
+    displayName: Try to build project
+
+  - task: Docker@2
+    displayName: Build container image and upload to container registry
+    inputs:
+      containerRegistry: TgwSoftwareContainerRegistry
+      repository: $(imageNameStaging)
+      command: buildAndPush
+      Dockerfile: ./Dockerfile
+      tags: |
+        latest
+        $(major).$(minor).$(patch)-r$(Build.BuildNumber)

@@ -1,0 +1,766 @@
+<testExecutions version="1">
+  <file path="src/components/ActionBar/tests/ActionBar.spec.ts">
+    <testCase name="Test ActionBar - should render correctly" duration="39" />
+    <testCase name="Test ActionBar - should render critical problem correctly" duration="18" />
+    <testCase name="Test ActionBar - should render zero crossing correctly" duration="17" />
+    <testCase name="Test ActionBar - should not emit click event for confirm" duration="10" />
+    <testCase name="Test ActionBar - should not emit click event for report problem and split pick" duration="8" />
+    <testCase name="Test ActionBar - should emit click event for confirm" duration="8" />
+    <testCase name="Test ActionBar - should emit click event for report problem" duration="7" />
+    <testCase name="Test ActionBar - should emit click event for split pick" duration="8" />
+    <testCase name="Test ActionBar - should disable split pick button when quantity is 1" duration="9" />
+    <testCase name="Test ActionBar - should disable split pick button when a critical problem is selected" duration="8" />
+    <testCase name="Test ActionBar - should emit click event for empty" duration="8" />
+    <testCase name="Test ActionBar - should emit click event for filled" duration="25" />
+    <testCase name="Test ActionBar - should emit click event for edit scans" duration="13" />
+    <testCase name="Test ActionBar - should disable all buttons" duration="22" />
+    <testCase name="Test ActionBar - should disable confirm button" duration="8" />
+    <testCase name="Test ActionBar - should render scanning buttons" duration="8" />
+    <testCase name="Test ActionBar - should render scanning once is in process" duration="12" />
+    <testCase name="Test ActionBar - should render scanning once done" duration="12" />
+    <testCase name="Test ActionBar - should render scanning each is in process" duration="16" />
+    <testCase name="Test ActionBar - should render scanning each done" duration="16" />
+    <testCase name="Test ActionBar - should show the number of saved problems" duration="14" />
+    <testCase name="Test ActionBar - should change problem button type" duration="11" />
+    <testCase name="Test ActionBar - should change problem button type and text" duration="11" />
+    <testCase name="Test ActionBar - should show robot paused state" duration="13" />
+    <testCase name="Test ActionBar - should display send target on TargetFull" duration="6" />
+  </file>
+  <file path="src/components/AdvancedCycleCountFooter/tests/AdvancedCycleCountFooter.spec.ts">
+    <testCase name="Test AdvancedCycleCountFooter - should render counted correctly" duration="8" />
+    <testCase name="Test AdvancedCycleCountFooter - should render scanned correctly" duration="0" />
+    <testCase name="Test AdvancedCycleCountFooter - should emit button events" duration="4" />
+    <testCase name="Test AdvancedCycleCountFooter - should disable delete count button" duration="4" />
+    <testCase name="Test AdvancedCycleCountFooter - should disable delete scan button" duration="1" />
+    <testCase name="Test AdvancedCycleCountFooter - should hide delete scan button" duration="2" />
+    <testCase name="Test AdvancedCycleCountFooter - should hide delete count button" duration="1" />
+  </file>
+  <file path="src/components/AdvancedCycleCountTabCounted/tests/AdvancedCycleCountTabCounted.spec.ts">
+    <testCase name="Test AdvancedCycleCountTabCounted - should render correctly" duration="5" />
+    <testCase name="Test AdvancedCycleCountTabCounted - should emit quantity changed" duration="2" />
+    <testCase name="Test AdvancedCycleCountTabCounted - should render not counted" duration="3" />
+  </file>
+  <file path="src/components/AdvancedCycleCountTabDetails/tests/AdvancedCycleCountTabDetails.spec.ts">
+    <testCase name="Test AdvancedCycleCountTabDetails - should render correctly" duration="7" />
+  </file>
+  <file path="src/components/AdvancedCycleCountTabScans/tests/AdvancedCycleCountTabScans.spec.ts">
+    <testCase name="Test AdvancedCycleCountTabScans - should render correctly" duration="3" />
+    <testCase name="Test AdvancedCycleCountTabScans - should emit barcodes selected" duration="6" />
+  </file>
+  <file path="src/components/AdvancedCycleCountTabs/tests/AdvancedCycleCountTabs.spec.ts">
+    <testCase name="Test AdvancedCycleCountTabs - should render correctly" duration="57" />
+    <testCase name="Test AdvancedCycleCountTabs - should render correctly - scanning" duration="21" />
+    <testCase name="Test AdvancedCycleCountTabs - should emit quantity changed on reduce button click" duration="57" />
+    <testCase name="Test AdvancedCycleCountTabs - should emit active tab on changed" duration="46" />
+    <testCase name="Test AdvancedCycleCountTabs - should always select the last active set tab" duration="41" />
+    <testCase name="Test AdvancedCycleCountTabs - should select the first tab if it is the only visible tab" duration="7" />
+  </file>
+  <file path="src/components/CircleIndicator/tests/CircleIndicator.spec.ts">
+    <testCase name="Test CircleIndicator - should not render indicator text" duration="5" />
+    <testCase name="Test CircleIndicator - should render correctly" duration="3" />
+  </file>
+  <file path="src/components/CompartmentCard/tests/CompartmentCard.spec.ts">
+    <testCase name="Test CompartmentCard - should render correctly" duration="6" />
+    <testCase name="Test CompartmentCard - should render active" duration="3" />
+    <testCase name="Test CompartmentCard - should render selectable" duration="1" />
+    <testCase name="Test CompartmentCard - should not emit compartmentClicked" duration="3" />
+    <testCase name="Test CompartmentCard - should emit compartmentClicked" duration="1" />
+  </file>
+  <file path="src/components/CompartmentCards/tests/CompartmentCards.spec.ts">
+    <testCase name="Test CompartmentCards - should render correctly" duration="4" />
+    <testCase name="Test CompartmentCards - should render multi item correctly" duration="6" />
+    <testCase name="Test CompartmentCards - should emit active compartment changed" duration="4" />
+  </file>
+  <file path="src/components/CompartmentIndicator/tests/CompartmentIndicator.spec.ts">
+    <testCase name="Test CompartmentIndicator - should render correctly without scannedAmount" duration="5" />
+    <testCase name="Test CompartmentIndicator - should render 0 correctly" duration="4" />
+    <testCase name="Test CompartmentIndicator - should render scannedAmount correctly" duration="1" />
+    <testCase name="Test CompartmentIndicator - should render default size correctly" duration="1" />
+  </file>
+  <file path="src/components/ConsolidationActionBar/tests/ConsolidationActionBar.spec.ts">
+    <testCase name="Test ConsolidationActionBar - should render correctly" duration="8" />
+    <testCase name="Test ConsolidationActionBar - should render correctly for manual consolidation task" duration="9" />
+    <testCase name="Test ConsolidationActionBar - should render critical problem correctly" duration="12" />
+    <testCase name="Test ConsolidationActionBar - should not emit click event for confirm" duration="6" />
+    <testCase name="Test ConsolidationActionBar - should not emit click event for report problem" duration="2" />
+    <testCase name="Test ConsolidationActionBar - should emit click event for confirm" duration="4" />
+    <testCase name="Test ConsolidationActionBar - should emit click event for report problem" duration="2" />
+    <testCase name="Test ConsolidationActionBar - should emit click event for edit scans" duration="6" />
+    <testCase name="Test ConsolidationActionBar - should disable all buttons" duration="3" />
+    <testCase name="Test ConsolidationActionBar - should disable confirm button" duration="3" />
+    <testCase name="Test ConsolidationActionBar - should render scanning buttons" duration="5" />
+    <testCase name="Test ConsolidationActionBar - should render scanning once is in process" duration="5" />
+    <testCase name="Test ConsolidationActionBar - should render scanning once done" duration="5" />
+    <testCase name="Test ConsolidationActionBar - should render scanning each is in process" duration="5" />
+    <testCase name="Test ConsolidationActionBar - should render scanning each done" duration="4" />
+    <testCase name="Test ConsolidationActionBar - should show the number of saved problems" duration="9" />
+    <testCase name="Test ConsolidationActionBar - should change problem button type" duration="5" />
+    <testCase name="Test ConsolidationActionBar - should render manual mode" duration="9" />
+    <testCase name="Test ConsolidationActionBar - should render first step for move" duration="6" />
+    <testCase name="Test ConsolidationActionBar - should render second step for move" duration="5" />
+    <testCase name="Test ConsolidationActionBar - should disable split pick button when quantity &lt;= 1" duration="4" />
+    <testCase name="Test ConsolidationActionBar - should disable split pick button when a critical problem is selected" duration="5" />
+    <testCase name="Test ConsolidationActionBar - should change split pick button" duration="7" />
+    <testCase name="Test ConsolidationActionBar - should not render split pick button without min max quantity" duration="2" />
+    <testCase name="Test ConsolidationActionBar - should display send target on TargetFull" duration="5" />
+    <testCase name="Test ConsolidationActionBar - should render zero crossing correctly" duration="7" />
+    <testCase name="Test ConsolidationActionBar - should emit click event for empty and filled" duration="1" />
+    <testCase name="Test ConsolidationActionBar - should disable zero crossing buttons correctly" duration="5" />
+  </file>
+  <file path="src/components/ConvertLoadCarrierDialog/tests/ConvertLoadCarrierDialog.spec.ts">
+    <testCase name="Test ConvertLoadCarrierDialog - should not render when not visible" duration="3" />
+    <testCase name="Test ConvertLoadCarrierDialog - should render correctly" duration="29" />
+    <testCase name="Test ConvertLoadCarrierDialog - should close on cancel click" duration="4" />
+    <testCase name="Test ConvertLoadCarrierDialog - should emit convert on submit click" duration="0" />
+  </file>
+  <file path="src/components/CreateScanDialog/tests/CreateScanDialog.spec.ts">
+    <testCase name="Test CreateScanDialog - should render correctly" duration="69" />
+    <testCase name="Test CreateScanDialog - should close on cancel click" duration="22" />
+    <testCase name="Test CreateScanDialog - should emit continue on valid barcode" duration="32" />
+    <testCase name="Test CreateScanDialog - should display backend validation error(backend error message)" duration="39" />
+    <testCase name="Test CreateScanDialog - should display backend validation error(client error message)" duration="35" />
+    <testCase name="Test CreateScanDialog - should render multiple scan fields" duration="20" />
+    <testCase name="Test CreateScanDialog - should render multiple scan fields of same type" duration="30" />
+    <testCase name="Test CreateScanDialog - should emit continue with multiple fields of same type" duration="59" />
+    <testCase name="Test CreateScanDialog - should show validation error for multiple scan fields(backend validation)" duration="35" />
+    <testCase name="Test CreateScanDialog - should display client validation error" duration="128" />
+    <testCase name="Test CreateScanDialog - should display client validation error for multiple scan fields" duration="242" />
+    <testCase name="Test CreateScanDialog - should fill createScanModel" duration="31" />
+    <testCase name="Test CreateScanDialog - should pre fill createScanModel" duration="20" />
+  </file>
+  <file path="src/components/CycleCountActionBar/tests/CycleCountActionBar.spec.ts">
+    <testCase name="Test CycleCountActionBar - should render correctly - no scan" duration="9" />
+    <testCase name="Test CycleCountActionBar - should render correctly - scan once" duration="15" />
+    <testCase name="Test CycleCountActionBar - should render correctly - scan each" duration="4" />
+    <testCase name="Test CycleCountActionBar - should render disabled buttons correctly - DisabledButton.all" duration="7" />
+    <testCase name="Test CycleCountActionBar - should not emit click event for disabled buttons" duration="5" />
+    <testCase name="Test CycleCountActionBar - should emit click event of buttons" duration="11" />
+    <testCase name="Test CycleCountActionBar - should render disabled buttons correctly" duration="7" />
+    <testCase name="Test CycleCountActionBar - should render critical problem correctly" duration="9" />
+    <testCase name="Test CycleCountActionBar - should change problem button type" duration="15" />
+    <testCase name="Test CycleCountActionBar - should display send target on TargetFull" duration="6" />
+    <testCase name="Test CycleCountActionBar - should open emptyCompartmentMessageBox when quantity is 0 on confirm" duration="11" />
+    <testCase name="Test CycleCountActionBar - should render confirm button correctly" duration="9" />
+    <testCase name="Test CycleCountActionBar - should disable advanced and scan button on critical problem" duration="8" />
+    <testCase name="Test CycleCountActionBar - should not display empty compartment message box on critical problem" duration="7" />
+  </file>
+  <file path="src/components/CycleCountInput/tests/CycleCountInput.spec.ts">
+    <testCase name="Test CycleCountInput - should render correctly" duration="9" />
+    <testCase name="Test CycleCountInput - should open quantity input" duration="33" />
+    <testCase name="Test CycleCountInput - should change input text" duration="2" />
+    <testCase name="Test CycleCountInput - should change on increase button" duration="3" />
+    <testCase name="Test CycleCountInput - should change on reduce button" duration="1" />
+    <testCase name="Test CycleCountInput - should not change to negative number on reduce button" duration="4" />
+    <testCase name="Test CycleCountInput - should disable everything" duration="2" />
+    <testCase name="Test CycleCountInput - should not be modifiable" duration="1" />
+    <testCase name="Test CycleCountInput - should render placeholder" duration="1" />
+  </file>
+  <file path="src/components/DeleteCountMessageBox/tests/DeleteCountMessageBox.spec.ts">
+    <testCase name="Test DeleteCountMessageBox - should render correctly" duration="62" />
+    <testCase name="Test DeleteCountMessageBox - should return cancelled" duration="43" />
+  </file>
+  <file path="src/components/EnterRobotModeStep/tests/EnterRobotModeStep.spec.ts">
+    <testCase name="Test EnterRobotModeStep - should render correctly" duration="6" />
+  </file>
+  <file path="src/components/HeaderWithDetails/tests/HeaderWithDetails.spec.ts">
+    <testCase name="Test HeaderWithDetails - should render correctly" duration="6" />
+  </file>
+  <file path="src/components/IconButton/tests/IconButton.spec.ts">
+    <testCase name="Test IconButton - should render correctly" duration="8" />
+    <testCase name="Test IconButton - should set color with props" duration="3" />
+    <testCase name="Test IconButton - should remove margin from icon when no text" duration="1" />
+    <testCase name="Test IconButton - should align to left" duration="0" />
+  </file>
+  <file path="src/components/ItemImage/tests/ItemImage.spec.ts">
+    <testCase name="Test ItemImage - should render correctly" duration="4" />
+    <testCase name="Test ItemImage - should not open image gallery when no images available" duration="20" />
+    <testCase name="Test ItemImage - should open image gallery when images available" duration="10" />
+    <testCase name="Test ItemImage - should close dialog on cancel" duration="2" />
+    <testCase name="Test ItemImage - should not be allowed to open the image gallery" duration="1" />
+    <testCase name="Test ItemImage - should render correctly when no image available" duration="5" />
+    <testCase name="Test ItemImage - should render correctly when image could not be loaded" duration="8" />
+    <testCase name="Test ItemImage - should render unknown item correctly" duration="4" />
+  </file>
+  <file path="src/components/ItemImageGallery/tests/ItemImageGallery.spec.ts">
+    <testCase name="Test ItemImageGallery - should render correctly" duration="5" />
+    <testCase name="Test ItemImageGallery - should select the first image" duration="1" />
+    <testCase name="Test ItemImageGallery - should change the selected image on click" duration="4" />
+  </file>
+  <file path="src/components/ItemRecountMismatchDialog/tests/ItemRecountMismatchDialog.spec.ts">
+    <testCase name="Test ItemRecountMismatchDialog - should render correctly" duration="6" />
+  </file>
+  <file path="src/components/ItemRecountRequiredDialog/tests/ItemRecountRequiredDialog.spec.ts">
+    <testCase name="Test ItemRecountRequiredDialog - should render correctly" duration="7" />
+  </file>
+  <file path="src/components/ItemScanFailedDialog/tests/ItemScanFailedDialog.spec.ts">
+    <testCase name="Test ItemScanFailedDialog - should render correctly" duration="9" />
+    <testCase name="Test ItemScanFailedDialog - should close on ok click" duration="4" />
+    <testCase name="Test ItemScanFailedDialog - should render a custom error text" duration="4" />
+  </file>
+  <file path="src/components/LeavePageDialog/tests/LeavePageDialog.spec.ts">
+    <testCase name="Test LeavePageDialog - should render correctly" duration="233" />
+  </file>
+  <file path="src/components/LoadCarrier/tests/LoadCarrier.spec.ts">
+    <testCase name="Test LoadCarrier - should render correctly" duration="6" />
+    <testCase name="Test LoadCarrier - should render correctly when showZeroCrossing" duration="5" />
+    <testCase name="Test LoadCarrier - should show load carrier on the way" duration="2" />
+    <testCase name="Test LoadCarrier - should render noRead correctly" duration="5" />
+    <testCase name="Test LoadCarrier - should show load carrier arrived" duration="7" />
+    <testCase name="Test LoadCarrier - should emit active compartment" duration="7" />
+    <testCase name="Test LoadCarrier - should render robot paused correctly - Source" duration="6" />
+    <testCase name="Test LoadCarrier - should render robot paused correctly - Target" duration="3" />
+    <testCase name="Test LoadCarrier - should show send to reject indicator" duration="6" />
+    <testCase name="Test LoadCarrier - should emit view content" duration="6" />
+    <testCase name="Test LoadCarrier - should not render view content" duration="3" />
+    <testCase name="Test LoadCarrier - should render modification menu" duration="5" />
+    <testCase name="Test LoadCarrier - should render send away message box correctly" duration="19" />
+    <testCase name="Test LoadCarrier - should close dialog on cancel button" duration="3" />
+    <testCase name="Test LoadCarrier - should emit on send away click and close dialog" duration="16" />
+    <testCase name="Test LoadCarrier - should open dialog on click" duration="20" />
+    <testCase name="Test LoadCarrier - should not render modification menu" duration="10" />
+    <testCase name="Test LoadCarrier - should render drive through" duration="10" />
+    <testCase name="Test LoadCarrier - should render dummy load carrier" duration="11" />
+    <testCase name="Test LoadCarrier - should disable view content in rovoflex picking" duration="10" />
+    <testCase name="Test LoadCarrier - should disable view content when problem with abort is selected" duration="6" />
+  </file>
+  <file path="src/components/LoadCarrierCompartment/tests/LoadCarrierCompartment.spec.ts">
+    <testCase name="Test LoadCarrierCompartment - should render correct stock -Picking" duration="12" />
+    <testCase name="Test LoadCarrierCompartment - should render correctly -Picking" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should render correctly for target -Picking" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should not emit compartmentClicked -Picking" duration="5" />
+    <testCase name="Test LoadCarrierCompartment - should emit compartmentClicked -Picking" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should not highlight quantity -Picking" duration="4" />
+    <testCase name="Test LoadCarrierCompartment - should apply size-medium -Picking" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should apply size-small -Picking" duration="1" />
+    <testCase name="Test LoadCarrierCompartment - should apply size-mini -Picking" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render scan once for source -Picking" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render scan once for source - scanning completed -Picking" duration="1" />
+    <testCase name="Test LoadCarrierCompartment - should render scan each for source -Picking" duration="1" />
+    <testCase name="Test LoadCarrierCompartment - should render scan each for source - scanning completed -Picking" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render scan once for target -Picking" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should show question mark on zero crossing -Picking" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should hide all details -Picking" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render correct stock -Consolidation" duration="4" />
+    <testCase name="Test LoadCarrierCompartment - should render empty compartment correctly -Consolidation" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render filled compartment correctly -Consolidation" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render selectable compartment correctly -Consolidation" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render active source compartment correctly -Consolidation" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render active target compartment correctly -Consolidation" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should render target correctly in manual mode -Consolidation" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render source correctly in manual mode -Consolidation" duration="4" />
+    <testCase name="Test LoadCarrierCompartment - should render indicator correctly -CycleCount" duration="10" />
+    <testCase name="Test LoadCarrierCompartment - should render multi item indicator correctly -CycleCount" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should render correct stock -CycleCount" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should render SOURCE correctly -CycleCount -ScanOnce -S2S" duration="10" />
+    <testCase name="Test LoadCarrierCompartment - should render TARGET correctly -CycleCount -ScanOnce -S2S" duration="6" />
+    <testCase name="Test LoadCarrierCompartment - should render SOURCE correctly -CycleCount -ScanOnce -S2T" duration="15" />
+    <testCase name="Test LoadCarrierCompartment - should render TARGET correctly -CycleCount -ScanOnce -S2T" duration="6" />
+    <testCase name="Test LoadCarrierCompartment - should render SOURCE correctly -CycleCount -ScanEach -S2S" duration="7" />
+    <testCase name="Test LoadCarrierCompartment - should render TARGET correctly -CycleCount -ScanEach -S2S" duration="5" />
+    <testCase name="Test LoadCarrierCompartment - should render SOURCE correctly -CycleCount -ScanEach -S2T" duration="9" />
+    <testCase name="Test LoadCarrierCompartment - should render TARGET correctly -CycleCount -ScanEach -S2T" duration="10" />
+    <testCase name="Test LoadCarrierCompartment - should render SOURCE correctly -CycleCount -NoScan -S2S" duration="4" />
+    <testCase name="Test LoadCarrierCompartment - should render SOURCE correctly -CycleCount -NoScan -S2T" duration="7" />
+    <testCase name="Test LoadCarrierCompartment - should render TARGET correctly -CycleCount -NoScan -S2T" duration="7" />
+    <testCase name="Test LoadCarrierCompartment - should render last scanned item -MultiItemCycleCount -ScanEach -S2T" duration="15" />
+    <testCase name="Test LoadCarrierCompartment - should render correct stock -Purge And Recall" duration="4" />
+    <testCase name="Test LoadCarrierCompartment - should render correctly -Purge and Recall" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should render correctly for target -Purge and Recall" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should not emit compartmentClicked -Purge and Recall" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should emit compartmentClicked -Purge and Recall" duration="1" />
+    <testCase name="Test LoadCarrierCompartment - should not highlight quantity -Purge and Recall" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should apply size-medium -Purge and Recall" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should apply size-small -Purge and Recall" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should apply size-mini -Purge and Recall" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should render scan once for source -Purge and Recall" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render scan once for source - scanning completed -Purge and Recall" duration="2" />
+    <testCase name="Test LoadCarrierCompartment - should render scan each for source -Purge and Recall" duration="1" />
+    <testCase name="Test LoadCarrierCompartment - should render scan each for source - scanning completed -Purge and Recall" duration="1" />
+    <testCase name="Test LoadCarrierCompartment - should render scan once for target -Purge and Recall" duration="3" />
+    <testCase name="Test LoadCarrierCompartment - should show question mark on zero crossing -Purge and Recall" duration="1" />
+    <testCase name="Test LoadCarrierCompartment - should hide all details -Purge and Recall" duration="1" />
+  </file>
+  <file path="src/components/LoadCarrierCompartments/tests/LoadCarrierCompartments.spec.ts">
+    <testCase name="Test LoadCarrierCompartments - should render correctly" duration="4" />
+    <testCase name="Test LoadCarrierCompartments - should display the compartment as active for source" duration="6" />
+    <testCase name="Test LoadCarrierCompartments - should display the compartment as active for target" duration="2" />
+    <testCase name="Test LoadCarrierCompartments - should not display the compartment as active" duration="2" />
+    <testCase name="Test LoadCarrierCompartments - should not display an active compartment as no compartmentState is active in compartmentInfos" duration="2" />
+    <testCase name="Test LoadCarrierCompartments - should rotate lc" duration="3" />
+    <testCase name="Test LoadCarrierCompartments - should set the first compartment to active when not defined in task" duration="2" />
+    <testCase name="Test LoadCarrierCompartments - should show zero crossing" duration="3" />
+    <testCase name="Test LoadCarrierCompartments - should return compartment state none on target if scanning required and first scan not finished" duration="2" />
+    <testCase name="Test LoadCarrierCompartments - should change activeCompartment when clicking on an compartment" duration="3" />
+    <testCase name="Test LoadCarrierCompartments - should return correct amount of counted compartments" duration="4" />
+  </file>
+  <file path="src/components/LoadCarrierDetails/tests/LoadCarrierDetails.spec.ts">
+    <testCase name="Test LoadCarrierDetails - should render correctly" duration="4" />
+  </file>
+  <file path="src/components/LoadCarrierDetailsCompartment/tests/LoadCarrierDetailsCompartment.spec.ts">
+    <testCase name="Test LoadCarrierDetailsCompartment - should render correctly" duration="9" />
+    <testCase name="Test LoadCarrierDetailsCompartment - should render active correctly" duration="3" />
+    <testCase name="Test LoadCarrierDetailsCompartment - should render disable_selection correctly" duration="1" />
+    <testCase name="Test LoadCarrierDetailsCompartment - should render multi item correctly" duration="1" />
+    <testCase name="Test LoadCarrierDetailsCompartment - should emit compartmentClicked" duration="4" />
+    <testCase name="Test LoadCarrierDetailsCompartment - should render cylce counting compartment correctly" duration="4" />
+    <testCase name="Test LoadCarrierDetailsCompartment - should render unknown item correctly" duration="7" />
+  </file>
+  <file path="src/components/LoadCarrierDetailsCompartments/tests/LoadCarrierDetailsCompartments.spec.ts">
+    <testCase name="Test LoadCarrierDetailsCompartments - should render correctly" duration="59" />
+    <testCase name="Test LoadCarrierDetailsCompartments - should render multi item with empty compartment correctly" duration="7" />
+    <testCase name="Test LoadCarrierDetailsCompartments - should render multi item correctly" duration="15" />
+    <testCase name="Test LoadCarrierDetailsCompartments - should rotate lc" duration="4" />
+    <testCase name="Test LoadCarrierDetailsCompartments - render one empty compartment correctly" duration="15" />
+    <testCase name="Test LoadCarrierDetailsCompartments - should render multi item for cycle counting correctly" duration="2" />
+    <testCase name="Test LoadCarrierDetailsCompartments - should render multi item for cycle counting finished correctly" duration="3" />
+    <testCase name="Test LoadCarrierDetailsCompartments - should preselect the correct compartment" duration="12" />
+  </file>
+  <file path="src/components/LoadCarrierDetailsFooter/tests/LoadCarrierDetailsFooter.spec.ts">
+    <testCase name="Test LoadCarrierDetailsFooter - should render correctly" duration="6" />
+    <testCase name="Test LoadCarrierDetailsFooter - should render details switch" duration="2" />
+    <testCase name="Test LoadCarrierDetailsFooter - should not render details switch" duration="1" />
+  </file>
+  <file path="src/components/LoadCarrierDetailsOrderlines/tests/LoadCarrierDetailsOrderLines.spec.ts">
+    <testCase name="Test LoadCarrierDetailsOrderLines - should render source correctly" duration="304" />
+    <testCase name="Test LoadCarrierDetailsOrderLines - should render target correctly" duration="63" />
+  </file>
+  <file path="src/components/LoadCarrierDetailsSwitch/tests/LoadCarrierDetailsSwitch.spec.ts">
+    <testCase name="Test LoadCarrierDetailsSwitch - should render correctly" duration="7" />
+    <testCase name="Test LoadCarrierDetailsSwitch - should update modelValue on click" duration="4" />
+  </file>
+  <file path="src/components/LoadCarrierHeader/tests/LoadCarrierHeader.spec.ts">
+    <testCase name="Test LoadCarrierHeader - should render correctly" duration="6" />
+    <testCase name="Test LoadCarrierHeader - should render source left correctly" duration="2" />
+    <testCase name="Test LoadCarrierHeader - should render target right correctly" duration="3" />
+    <testCase name="Test LoadCarrierHeader - should render noRead correctly" duration="2" />
+  </file>
+  <file path="src/components/LoadCarrierHeaderItem/tests/LoadCarrierHeaderItem.spec.ts">
+    <testCase name="Test LoadCarrierHeaderItem - should render correctly" duration="6" />
+  </file>
+  <file path="src/components/LoadCarrierItemDetails/tests/LoadCarrierItemDetails.spec.ts">
+    <testCase name="Test LoadCarrierItemDetails - should render correctly" duration="17" />
+    <testCase name="Test LoadCarrierItemDetails - should render multi item load carrier correctly" duration="5" />
+    <testCase name="Test LoadCarrierItemDetails - should render no items correctly" duration="3" />
+    <testCase name="Test LoadCarrierItemDetails - should render no items compartment correctly" duration="2" />
+    <testCase name="Test LoadCarrierItemDetails - should not render undefined weight" duration="3" />
+    <testCase name="Test LoadCarrierItemDetails - should set image urls of unknown items correctly" duration="4" />
+  </file>
+  <file path="src/components/LoadCarrierNoRead/tests/LoadCarrierNoRead.spec.ts">
+    <testCase name="Test LoadCarrierNoRead - should render correctly" duration="5" />
+    <testCase name="Test LoadCarrierNoRead - should show quantity input on click of enterLoadCarrierNumber button" duration="34" />
+    <testCase name="Test LoadCarrierNoRead - should emit identifyLoadCarrier on submit of quantity input" duration="10" />
+  </file>
+  <file path="src/components/LoadCarrierTypeIcon/tests/LoadCarrierTypeIcon.spec.ts">
+    <testCase name="Test LoadCarrierTypeIcon - should render one compartment correctly" duration="5" />
+    <testCase name="Test LoadCarrierTypeIcon - should render multiple compartments correctly" duration="4" />
+  </file>
+  <file path="src/components/LoadCarrierTypeSelect/tests/LoadCarrierTypeSelect.spec.ts">
+    <testCase name="Test LoadCarrierTypeSelect - should render correctly" duration="6" />
+    <testCase name="Test LoadCarrierTypeSelect - should render currentLcType correctly" duration="4" />
+    <testCase name="Test LoadCarrierTypeSelect - should render numberOfOccupiedCompartments correctly" duration="2" />
+    <testCase name="Test LoadCarrierTypeSelect - should check selectedLcType" duration="4" />
+  </file>
+  <file path="src/components/MessageContainer/tests/MessageContainer.spec.ts">
+    <testCase name="Test MessageContainer - should render correctly" duration="14" />
+  </file>
+  <file path="src/components/NotCounted/tests/NotCounted.spec.ts">
+    <testCase name="Test NotCounted - should render correctly" duration="4" />
+  </file>
+  <file path="src/components/ProblemClassificationButton/tests/ProblemClassificationButton.spec.ts">
+    <testCase name="Test ProblemClassificationButton - should render correctly" duration="5" />
+    <testCase name="Test ProblemClassificationButton - should be active and emit on click" duration="6" />
+    <testCase name="Test ProblemClassificationButton - should be inactive and emit on click" duration="1" />
+  </file>
+  <file path="src/components/QuantityInput/tests/QuantityInput.spec.ts">
+    <testCase name="Test QuantityInput - should render correctly" duration="78" />
+    <testCase name="Test QuantityInput - should not allow values larger than max" duration="48" />
+    <testCase name="Test QuantityInput - should not allow values smaller than min" duration="32" />
+    <testCase name="Test QuantityInput - should not allow letters or blanks in the input" duration="45" />
+    <testCase name="Test QuantityInput - clear button sets value to 0" duration="32" />
+    <testCase name="Test QuantityInput - limits maxlength to 8" duration="48" />
+    <testCase name="Test QuantityInput - number buttons add the value to the input field" duration="45" />
+    <testCase name="Test QuantityInput - closes dialog on cancel button" duration="20" />
+    <testCase name="Test QuantityInput - closes dialog when submit button press was successful" duration="42" />
+  </file>
+  <file path="src/components/RadioSelection/tests/RadioSelection.spec.ts">
+    <testCase name="Test RadioSelection - should render correctly" duration="7" />
+    <testCase name="Test RadioSelection - should select on click" duration="13" />
+    <testCase name="Test RadioSelection - should deselect on click of another item" duration="5" />
+  </file>
+  <file path="src/components/RovoflexFooter/tests/RovoflexFooter.spec.ts">
+    <testCase name="Test RovoflexFooter - should render Picking correctly" duration="10" />
+    <testCase name="Test RovoflexFooter - should render ManualPickingRequested correctly" duration="5" />
+    <testCase name="Test RovoflexFooter - should render Error correctly" duration="3" />
+  </file>
+  <file path="src/components/RovoflexPickCounter/tests/RovoflexPickCounter.spec.ts">
+    <testCase name="Test RovoflexPickCounter - should render correctly" duration="6" />
+    <testCase name="Test RovoflexPickCounter - should update the percentage when the props change" duration="4" />
+  </file>
+  <file path="src/components/RovoflexProblemDialog/tests/RovoflexProblemDialog.spec.ts">
+    <testCase name="Test RovoflexProblemDialog - should render one error correctly" duration="205" />
+    <testCase name="Test RovoflexProblemDialog - should render multiple errors correctly" duration="22" />
+    <testCase name="Test RovoflexProblemDialog - should emit on OK button click" duration="25" />
+    <testCase name="Test RovoflexProblemDialog - should change title for UnknownMovementError without task" duration="202" />
+  </file>
+  <file path="src/components/RovoflexSwitchHeader/tests/RovoflexSwitchHeader.spec.ts">
+    <testCase name="Test RovoflexSwitchHeader - should render Picking correctly" duration="42" />
+    <testCase name="Test RovoflexSwitchHeader - should render ManualPickingRequested correctly" duration="8" />
+    <testCase name="Test RovoflexSwitchHeader - should render switchFromError Picking correctly" duration="6" />
+  </file>
+  <file path="src/components/RovoflexToManual/tests/RovoflexToManual.spec.ts">
+    <testCase name="Test RovoflexToManual - should render Picking correctly" duration="5" />
+    <testCase name="Test RovoflexToManual - should render right to left correctly" duration="3" />
+    <testCase name="Test RovoflexToManual - should render ManualPickingRequested correctly" duration="7" />
+    <testCase name="Test RovoflexToManual - should render Error correctly" duration="2" />
+  </file>
+  <file path="src/components/ScanDetails/tests/ScanDetails.spec.ts">
+    <testCase name="Test ScanDetails - should render correctly" duration="8" />
+    <testCase name="Test ScanDetails - should show quantity one for scan each" duration="4" />
+    <testCase name="Test ScanDetails - should show quantity 10 for scan once" duration="1" />
+    <testCase name="Test ScanDetails - should render unknown item correctly" duration="12" />
+    <testCase name="Test ScanDetails - should not show increased quantity for each scan in cycle count" duration="2" />
+  </file>
+  <file path="src/components/ScanFooter/tests/ScanFooter.spec.ts">
+    <testCase name="Test ScanFooter - should render correctly" duration="9" />
+    <testCase name="Test ScanFooter - should emit back button clicked" duration="5" />
+    <testCase name="Test ScanFooter - should emit create button clicked" duration="1" />
+    <testCase name="Test ScanFooter - should emit delete button clicked" duration="2" />
+    <testCase name="Test ScanFooter - should disable all buttons" duration="1" />
+  </file>
+  <file path="src/components/ScanHintDialog/tests/ScanHintDialog.spec.ts">
+    <testCase name="Test ScanHintDialog - should render correctly" duration="60" />
+    <testCase name="Test ScanHintDialog - should close on cancel click" duration="14" />
+    <testCase name="Test ScanHintDialog - should emit continue" duration="13" />
+    <testCase name="Test ScanHintDialog - should render RightToLeft in mode create" duration="20" />
+    <testCase name="Test ScanHintDialog - should render LeftToRight in mode create" duration="15" />
+    <testCase name="Test ScanHintDialog - should render RightToLeft in mode delete" duration="12" />
+    <testCase name="Test ScanHintDialog - should render LeftToRight in mode delete" duration="11" />
+    <testCase name="Test ScanHintDialog - should render delete scan" duration="11" />
+    <testCase name="Test ScanHintDialog - should render delete scan multiple compartments" duration="14" />
+    <testCase name="Test ScanHintDialog - should render create scan multiple compartments" duration="21" />
+    <testCase name="Test ScanHintDialog - should load task without item correctly" duration="14" />
+    <testCase name="Test ScanHintDialog - should change opened when onOpened gets triggered and emit confirm on enter press" duration="16" />
+  </file>
+  <file path="src/components/ScanItem/tests/ScanItem.spec.ts">
+    <testCase name="Test ScanItem - should render correctly" duration="8" />
+  </file>
+  <file path="src/components/ScanList/tests/ScanList.spec.ts">
+    <testCase name="Test ScanList - should render correctly" duration="3" />
+    <testCase name="Test ScanList - should display correct scan numbers" duration="1" />
+    <testCase name="Test ScanList - should select item on click" duration="4" />
+    <testCase name="Test ScanList - should select first item after removing an item" duration="5" />
+  </file>
+  <file path="src/components/SwitchToRobotModeDialog/tests/SwitchToRobotModeDialog.spec.ts">
+    <testCase name="Test SwitchToRobotModeDialog - should render correctly" duration="54" />
+  </file>
+  <file path="src/components/TextWithHighlightedParts/tests/TextWithHighlightedParts.spec.ts">
+    <testCase name="Test TextWithHighlightedParts - should render correctly" duration="8" />
+  </file>
+  <file path="src/components/TroubleshootingFooter/tests/TroubleshootingFooter.spec.ts">
+    <testCase name="Test TroubleshootingFooter - should render correctly" duration="6" />
+    <testCase name="Test TroubleshootingFooter - should render correctly with selected Problems" duration="9" />
+    <testCase name="Test TroubleshootingFooter - should emit on back button click" duration="4" />
+    <testCase name="Test TroubleshootingFooter - should emit on send to reject button click" duration="1" />
+    <testCase name="Test TroubleshootingFooter - should disable save button" duration="2" />
+    <testCase name="Test TroubleshootingFooter - should disable back button" duration="1" />
+  </file>
+  <file path="src/components/TroubleshootingHeader/tests/TroubleshootingHeader.spec.ts">
+    <testCase name="Test TroubleshootingHeader - should render correctly" duration="6" />
+  </file>
+  <file path="src/components/TroubleshootingTabs/tests/TroubleshootingTabs.spec.ts">
+    <testCase name="Test TroubleshootingTabs - should render correctly (enabled source and target tabs)" duration="103" />
+    <testCase name="Test TroubleshootingTabs - should render the selected amount of problems" duration="46" />
+    <testCase name="Test TroubleshootingTabs - should render correctly (disabled source and target tabs)" duration="47" />
+    <testCase name="Test TroubleshootingTabs - should enable source-tab when sourceLc arrives" duration="39" />
+    <testCase name="Test TroubleshootingTabs - should change the order of the tabs when workstationDirection is right-to-left" duration="28" />
+  </file>
+  <file path="src/components/UndoSplitPickMessageBox/tests/UndoSplitPickMessageBox.spec.ts">
+    <testCase name="Test UndoSplitPickMessageBox - should render correctly" duration="232" />
+    <testCase name="Test UndoSplitPickMessageBox - should return cancelled" duration="45" />
+  </file>
+  <file path="src/components/UnknownItemMessageBox/tests/UnknownItemMessageBox.spec.ts">
+    <testCase name="Test UnknownItemMessageBox - should render correctly" duration="232" />
+  </file>
+  <file path="src/components/WorkstationSelection/tests/WorkstationSelection.spec.ts">
+    <testCase name="Test WorkstationSelection - should render correctly" duration="6" />
+    <testCase name="Test WorkstationSelection - should filter list" duration="25" />
+    <testCase name="Test WorkstationSelection - should enable continue button on station selection" duration="10" />
+    <testCase name="Test WorkstationSelection - should emit on back to login button press" duration="1" />
+    <testCase name="Test WorkstationSelection - should emit on continue button press" duration="2" />
+  </file>
+  <file path="src/composables/useCompartmentStyler/tests/useCompartmentStyler.spec.ts">
+    <testCase name="Test useCompartmentStyler - should render single compartment with padding values" duration="2" />
+    <testCase name="Test useCompartmentStyler - should render two compartments with padding values" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render three compartments with padding values" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render six compartments with padding values" duration="1" />
+    <testCase name="Test useCompartmentStyler - should render single compartment with rotation 180" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render single compartment without rotation" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render 3 compartments without rotation" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render 3 compartments with rotation 180" duration="1" />
+    <testCase name="Test useCompartmentStyler - should render 6 compartments without rotation" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render 6 compartments with rotation 180" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render 4 compartments with column and rowspan layout" duration="1" />
+    <testCase name="Test useCompartmentStyler - should render 3 compartments with 2 columnspan layout" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render 4 compartments with 2 rowspan layout" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render 4 compartments with 2 columnspan layout" duration="0" />
+    <testCase name="Test useCompartmentStyler - should render 3 compartments with column and rowspan layout" duration="1" />
+    <testCase name="Test useCompartmentStyler - should render 5 compartments with 1 rowspan layout" duration="0" />
+  </file>
+  <file path="src/composables/useItemScanValidator/tests/useItemScanValidator.spec.ts">
+    <testCase name="Test useItemScanValidator - should validate valid gtin" duration="2" />
+    <testCase name="Test useItemScanValidator - should validate invalid gtin" duration="1" />
+    <testCase name="Test useItemScanValidator - should validate valid imei" duration="0" />
+    <testCase name="Test useItemScanValidator - should validate invalid imei(too short)" duration="1" />
+    <testCase name="Test useItemScanValidator - should validate invalid imei(wrong checksum)" duration="0" />
+    <testCase name="Test useItemScanValidator - should validate valid gtin with format on task" duration="0" />
+    <testCase name="Test useItemScanValidator - should validate invalid gtin with format on task" duration="0" />
+    <testCase name="Test useItemScanValidator - should validate valid serial with backend call" duration="2" />
+    <testCase name="Test useItemScanValidator - should validate invalid serial with backend call" duration="12" />
+    <testCase name="Test useItemScanValidator - should call verify barcode once for all barcodes" duration="1" />
+    <testCase name="Test useItemScanValidator - should validate gtin with multiItemCycleCountTask" duration="0" />
+  </file>
+  <file path="src/composables/useMessage/tests/useMessage.spec.ts">
+    <testCase name="Test useMessage - should translate basic messages" duration="9" />
+    <testCase name="Test useMessage - should add parameter" duration="2" />
+    <testCase name="Test useMessage - should translate parameter" duration="1" />
+    <testCase name="Test useMessage - should handle missing translations gracefully" duration="4" />
+    <testCase name="Test useMessage - should handle missing translations with parameters gracefully" duration="0" />
+    <testCase name="Test useMessage - should handle missing parameter values gracefully" duration="1" />
+    <testCase name="Test useMessage - should handle empty parameters array" duration="0" />
+  </file>
+  <file path="src/composables/useRouteToInactiveView/tests/useRouteToInactiveView.spec.ts">
+    <testCase name="Test useRouteToInactiveView - should route to inactive view if workstationMode is WorkStationModeEnum.Off" duration="4" />
+    <testCase name="Test useRouteToInactiveView - should route to home view if on inactive view and workstationMode changes to WorkStationModeEnum.Picking" duration="1" />
+    <testCase name="Test useRouteToInactiveView - should not route to inactive view if workstationMode is WorkStationModeEnum.None" duration="0" />
+  </file>
+  <file path="src/composables/useTextTranslator/tests/useTextTranslator.spec.ts">
+    <testCase name="Test useTextTranslator - should translate with quotes" duration="2" />
+    <testCase name="Test useTextTranslator - should not translate" duration="0" />
+    <testCase name="Test useTextTranslator - should use fallback language" duration="0" />
+    <testCase name="Test useTextTranslator - should handle undefined input" duration="0" />
+    <testCase name="Test useTextTranslator - should handle empty translation string" duration="0" />
+    <testCase name="Test useTextTranslator - should handle three languages" duration="1" />
+    <testCase name="Test useTextTranslator - should handle translation with special characters" duration="0" />
+    <testCase name="Test useTextTranslator - should support without quotes" duration="0" />
+    <testCase name="Test useTextTranslator - should support escaped without quotes" duration="0" />
+    <testCase name="Test useTextTranslator - should support escaped with quotes" duration="0" />
+  </file>
+  <file path="src/composables/useUrlJoiner/tests/useUrlJoiner.spec.ts">
+    <testCase name="Test useUrlJoiner - should join urls correctly without /" duration="1" />
+    <testCase name="Test useUrlJoiner - should join urls correctly with /" duration="0" />
+    <testCase name="Test useUrlJoiner - should join urls correctly with multiple /" duration="0" />
+  </file>
+  <file path="src/helpers/useApiDataHelper/useApiDataHelper.spec.ts">
+    <testCase name="Test useApiDataHelper - should return correct value for isMultiItemCompartment" duration="2" />
+    <testCase name="Test useApiDataHelper - should return correct value for isMultiItem" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct stock compartments with zero quantity" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct stockCompartments for every stock" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct stock" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct compartment from task with stock compartments" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct workstation process without task" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct workstation process with task" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct compartment id by task" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct load carrier id by task" duration="0" />
+    <testCase name="Test useApiDataHelper - should correctly detect if source will be empty after picking task" duration="1" />
+    <testCase name="Test useApiDataHelper - should check if a load carrier is empty" duration="1" />
+    <testCase name="Test useApiDataHelper - should check if a load carrier is filled" duration="0" />
+    <testCase name="Test useApiDataHelper - should check if two compartments have the same item" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct confirmedItems" duration="9" />
+    <testCase name="Test useApiDataHelper - should check if zero crossing should be active" duration="0" />
+    <testCase name="Test useApiDataHelper - should get item from task" duration="0" />
+    <testCase name="Test useApiDataHelper - should get quantity from task" duration="0" />
+    <testCase name="Test useApiDataHelper - should get barcodes from task" duration="1" />
+    <testCase name="Test useApiDataHelper - should get gtins from task" duration="0" />
+    <testCase name="Test useApiDataHelper - should get verify barcode from task" duration="1" />
+    <testCase name="Test useApiDataHelper - should return scanned amount" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct scanning required" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct is scan once" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct is scan each" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct is source to source count" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct is scanning finished" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct is first scan finished" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct is compartment empty" duration="0" />
+    <testCase name="Test useApiDataHelper - should getCompartmentInfos manual inventory" duration="1" />
+    <testCase name="Test useApiDataHelper - should getCompartmentInfos manual move" duration="1" />
+    <testCase name="Test useApiDataHelper - should getCompartmentInfos manual swap" duration="0" />
+    <testCase name="Test useApiDataHelper - should getCompartmentInfos manual no active compartment" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct compartment infos auto" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct compartment infos manual consolidation" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct compartment infos picking" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct compartment infos cycle count" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct compartment infos purge and recall" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct is compartment counted" duration="1" />
+    <testCase name="Test useApiDataHelper - should return correct additional data value" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct stock from compartment" duration="0" />
+    <testCase name="Test useApiDataHelper - should correctly count items with quantity lager than 0" duration="0" />
+    <testCase name="Test useApiDataHelper - should return correct task splitted" duration="1" />
+    <testCase name="Test useApiDataHelper - should refresh isCompleted" duration="0" />
+    <testCase name="Test useApiDataHelper - should refresh cycleCountState" duration="1" />
+    <testCase name="Test useApiDataHelper - should get correct compartment by item id of load carrier" duration="0" />
+    <testCase name="Test useApiDataHelper - should get correct compartment by item id of load carrier with multi item compartment" duration="0" />
+    <testCase name="Test useApiDataHelper - should return undefined if gtin is not in compartment" duration="0" />
+    <testCase name="Test useApiDataHelper - should add new unknown item to source load carrier" duration="3" />
+    <testCase name="Test useApiDataHelper - should test isUnknownItem" duration="1" />
+    <testCase name="Test useApiDataHelper - should test hasUnknownItem" duration="1" />
+    <testCase name="Test useApiDataHelper - should test hasNotScannedBarcodeBefore" duration="0" />
+    <testCase name="Test useApiDataHelper - should test shouldAddBarcode" duration="1" />
+  </file>
+  <file path="src/router/tests/router.spec.ts">
+    <testCase name="Test router - should route to station selection" duration="5" />
+    <testCase name="Test router - should load workstationId from localStorage and route to station selection" duration="1" />
+    <testCase name="Test router - should skip station selection when workstation is available" duration="1" />
+  </file>
+  <file path="src/stores/useApiVersionStore/tests/useApiVersionStore.spec.ts">
+    <testCase name="Test useApiVersionStore - should load versions" duration="5" />
+    <testCase name="Test useApiVersionStore - should return the highest supported version for pcots" duration="1" />
+    <testCase name="Test useApiVersionStore - should return the highest supported version for pcotsExt" duration="1" />
+    <testCase name="Test useApiVersionStore - should not load pcotsExt, because it is not supported" duration="1" />
+  </file>
+  <file path="src/stores/useAppContainerConfigStore/tests/useAppContainerConfigStore.spec.ts">
+    <testCase name="Test useAppContainerConfigStore - should render correctly to de" duration="9" />
+    <testCase name="Test useAppContainerConfigStore - should render correctly to en" duration="1" />
+    <testCase name="Test useAppContainerConfigStore - should translate exit robot mode to de" duration="1" />
+    <testCase name="Test useAppContainerConfigStore - should translate exit robot mode to en" duration="1" />
+    <testCase name="Test useAppContainerConfigStore - should update robot menu item by rovoflex state" duration="1" />
+    <testCase name="Test useAppContainerConfigStore - should update header sub title" duration="1" />
+    <testCase name="Test useAppContainerConfigStore - should remove menuItems" duration="1" />
+  </file>
+  <file path="src/stores/useBarcodeStore/tests/useBarcodeStore.spec.ts">
+    <testCase name="Test useBarcodeStore - should add barcode" duration="3" />
+    <testCase name="Test useBarcodeStore - should add barcodes" duration="1" />
+    <testCase name="Test useBarcodeStore - should add barcodes" duration="1" />
+    <testCase name="Test useBarcodeStore - should remove barcode" duration="0" />
+    <testCase name="Test useBarcodeStore - should remove barcodes" duration="1" />
+    <testCase name="Test useBarcodeStore - should return the last scanned item" duration="1" />
+  </file>
+  <file path="src/stores/useKeycloakStore/tests/useKeycloakStore.spec.ts">
+    <testCase name="Test useKeycloakStore - should set login" duration="2" />
+    <testCase name="Test useKeycloakStore - should set keycloak" duration="1" />
+  </file>
+  <file path="src/stores/useLoadCarrierDetailsStore/tests/useLoadCarrierDetailsStore.spec.ts">
+    <testCase name="Test useLoadCarrierDetailsStore - should set load carrier details" duration="3" />
+    <testCase name="Test useLoadCarrierDetailsStore - should swap pcots location" duration="1" />
+  </file>
+  <file path="src/stores/useLoadCarrierStore/tests/useLoadCarrierStore.spec.ts">
+    <testCase name="Test useLoadCarrierStore - should set and reset source load carrier" duration="3" />
+    <testCase name="Test useLoadCarrierStore - should set and reset target load carrier" duration="1" />
+  </file>
+  <file path="src/stores/useRovoflexStore/tests/useRovoflexStore.spec.ts">
+    <testCase name="Test useRovoflexStore - should show notification" duration="4" />
+    <testCase name="Test useRovoflexStore - should close notification" duration="1" />
+    <testCase name="Test useRovoflexStore - should get 0 put quantity" duration="0" />
+    <testCase name="Test useRovoflexStore - should route home when robot in home position and on moveRobotToHome page" duration="3" />
+    <testCase name="Test useRovoflexStore - should ignore event when workstation mode is WorkStationModeEnum.Off" duration="1" />
+    <testCase name="Test useRovoflexStore - should load states" duration="4" />
+    <testCase name="Test useRovoflexStore - should not load robot state on taskExecutionMode init" duration="1" />
+    <testCase name="Test useRovoflexStore - should not load robot state on workstationMode off" duration="1" />
+  </file>
+  <file path="src/stores/useScanModificationStore/tests/useScanModificationStore.spec.ts">
+    <testCase name="Test useScanModificationStore - should handle correct scan" duration="6" />
+    <testCase name="Test useScanModificationStore - should handle correct scan with dialog open" duration="1" />
+    <testCase name="Test useScanModificationStore - should finish scanning" duration="5" />
+    <testCase name="Test useScanModificationStore - should handle incorrect scan" duration="0" />
+    <testCase name="Test useScanModificationStore - should increase cycle count quantity after scan" duration="2" />
+    <testCase name="Test useScanModificationStore - should not increase cycle count quantity after incorrect scan" duration="0" />
+    <testCase name="Test useScanModificationStore - should set error message from backend" duration="11" />
+    <testCase name="Test useScanModificationStore - should not set error message from backend" duration="0" />
+    <testCase name="Test useScanModificationStore - should support multiple barcodes of same barcodeType" duration="1" />
+    <testCase name="Test useScanModificationStore - should add new unknown item if the gtin could not be found in the load carrier" duration="4" />
+    <testCase name="Test useScanModificationStore - should reset unknownItemTypeCount to 1" duration="1" />
+    <testCase name="Test useScanModificationStore - should handle purge and recall correct scan" duration="0" />
+    <testCase name="Test useScanModificationStore - should finish purge and recall scanning" duration="2" />
+    <testCase name="Test useScanModificationStore - should handle purge and recall correct scan with dialog open" duration="0" />
+    <testCase name="Test useScanModificationStore - should handle purge and recall incorrect scan" duration="1" />
+    <testCase name="Test useScanModificationStore - should set error message from backend for purge and recall task" duration="1" />
+    <testCase name="Test useScanModificationStore - should not set error message from backend for purge and recall task" duration="1" />
+    <testCase name="Test useScanModificationStore - should support multiple barcodes of same barcodeType for purge and recall task" duration="0" />
+  </file>
+  <file path="src/stores/useTaskStore/tests/useTaskStore.spec.ts">
+    <testCase name="Test useTaskStore - should set and reset task" duration="3" />
+    <testCase name="Test useTaskStore - should increase and reset cycleCountQuantity" duration="1" />
+    <testCase name="Test useTaskStore - should test hasCycleCountedQuantities" duration="1" />
+    <testCase name="Test useTaskStore - should test addCountedCycleCountCompartment with cycleCountTask" duration="1" />
+  </file>
+  <file path="src/stores/useTroubleshootingStore/tests/useTroubleshootingStore.spec.ts">
+    <testCase name="Test useTroubleshootingStore - should return overall problem count" duration="2" />
+    <testCase name="Test useTroubleshootingStore - should clear problems" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should get all problems" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should not have problem with abort without problems" duration="0" />
+    <testCase name="Test useTroubleshootingStore - should not have problem with abort with problems" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should have problem with abort" duration="0" />
+    <testCase name="Test useTroubleshootingStore - should update problems correctly" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should return correct target full only" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should not add same problem" duration="0" />
+    <testCase name="Test useTroubleshootingStore - should handle problem correctly from backend " duration="1" />
+    <testCase name="Test useTroubleshootingStore - should return false when no problems match for sending to reject" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should return false when problems match for sending NONE to reject" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should return false when problems send to reject do not match location" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should return true when problems send source load carrier to reject" duration="0" />
+    <testCase name="Test useTroubleshootingStore - should return true when problems send target load carrier to reject" duration="1" />
+    <testCase name="Test useTroubleshootingStore - should return true when task problems match for sending to reject" duration="0" />
+    <testCase name="Test useTroubleshootingStore - should return true when problems send both load carriers to reject" duration="1" />
+  </file>
+  <file path="src/stores/useWorkspaceStore/tests/useWorkspaceStore.spec.ts">
+    <testCase name="Test useWorkspaceStore - should get workspace" duration="2" />
+    <testCase name="Test useWorkspaceStore - should clear workspace" duration="0" />
+    <testCase name="Test useWorkspaceStore - should have workstation" duration="1" />
+    <testCase name="Test useWorkspaceStore - should have available station" duration="0" />
+    <testCase name="Test useWorkspaceStore - should not have available station" duration="0" />
+    <testCase name="Test useWorkspaceStore - should update workstation state" duration="1" />
+    <testCase name="Test useWorkspaceStore - should load user" duration="1" />
+    <testCase name="Test useWorkspaceStore - should load available workstations" duration="2" />
+  </file>
+  <file path="src/views/AdvancedCycleCountView/tests/AdvancedCycleCountView.spec.ts">
+    <testCase name="Test AdvancedCycleCountView - should render correctly" duration="161" />
+    <testCase name="Test AdvancedCycleCountView - should render correctly with scanned barcodes" duration="114" />
+    <testCase name="Test AdvancedCycleCountView - should only delete currently selected scans on delete_count button" duration="327" />
+    <testCase name="Test AdvancedCycleCountView - should increase quantity when new scan appears" duration="288" />
+    <testCase name="Test AdvancedCycleCountView - should change text width when language is de" duration="45" />
+    <testCase name="Test AdvancedCycleCountView - should test showOppositeLcButton" duration="95" />
+    <testCase name="Test AdvancedCycleCountView - should update all elements on quantity change" duration="103" />
+    <testCase name="Test AdvancedCycleCountView - should delete scan" duration="91" />
+    <testCase name="Test AdvancedCycleCountView - should delete scan - multiItem" duration="98" />
+    <testCase name="Test AdvancedCycleCountView - should delete count - multiItem" duration="64" />
+  </file>
+  <file path="src/views/LoadCarrierDetailsView/tests/LoadCarrierDetailsView.spec.ts">
+    <testCase name="Test LoadCarrierDetailsView - should render source correctly" duration="43" />
+    <testCase name="Test LoadCarrierDetailsView - should render target correctly" duration="10" />
+    <testCase name="Test LoadCarrierDetailsView - should show opposite load carrier" duration="16" />
+    <testCase name="Test LoadCarrierDetailsView - should not show opposite load carrier" duration="14" />
+    <testCase name="Test LoadCarrierDetailsView - should change selected compartment" duration="10" />
+    <testCase name="Test LoadCarrierDetailsView - should route back with no data" duration="11" />
+    <testCase name="Test LoadCarrierDetailsView - should change button width on locale" duration="19" />
+    <testCase name="Test LoadCarrierDetailsView - should render correctly by current page" duration="10" />
+  </file>
+  <file path="src/views/ScanModificationView/tests/ScanModificationView.spec.ts">
+    <testCase name="Test ScanModificationView - should render correctly without scans" duration="69" />
+    <testCase name="Test ScanModificationView - should render correctly with scans" duration="61" />
+    <testCase name="Test ScanModificationView - should create scan" duration="31" />
+    <testCase name="Test ScanModificationView - should delete scan" duration="56" />
+    <testCase name="Test ScanModificationView - should trigger router back" duration="4" />
+  </file>
+  <file path="src/views/Troubleshooting/tests/Troubleshooting.spec.ts">
+    <testCase name="Test Troubleshooting - should render correctly" duration="17" />
+    <testCase name="Test Troubleshooting - should select and deselect source problem" duration="42" />
+    <testCase name="Test Troubleshooting - should trigger back" duration="2" />
+    <testCase name="Test Troubleshooting - should render fallback image and text if no problems are available" duration="88" />
+  </file>
+  <file path="src/views/WorkstationInactiveView/tests/WorkstationInactiveView.spec.ts">
+    <testCase name="Test WorkstationInactiveView - should render correctly" duration="52" />
+    <testCase name="Test WorkstationInactiveView - should render dark" duration="8" />
+  </file>
+  <file path="src/views/WorkstationSelectionView/tests/WorkstationSelectionView.spec.ts">
+    <testCase name="Test WorkstationSelectionView - should render correctly" duration="6" />
+    <testCase name="Test WorkstationSelectionView - should render multiple stations" duration="6" />
+    <testCase name="Test WorkstationSelectionView - should trigger back home in case of wrong workstation" duration="10" />
+    <testCase name="Test WorkstationSelectionView - should select station if its correct" duration="8" />
+    <testCase name="Test WorkstationSelectionView - should select first station" duration="4" />
+    <testCase name="Test WorkstationSelectionView - should trigger backToLogin" duration="3" />
+    <testCase name="Test WorkstationSelectionView - should reset workspace on backToLogin in dev mode" duration="5" />
+    <testCase name="Test WorkstationSelectionView - should select station from url param when available" duration="5" />
+    <testCase name="Test WorkstationSelectionView - should trigger back home in case of wrong workstation in url parameter" duration="7" />
+    <testCase name="Test WorkstationSelectionView - should select station from sessionStorage when available" duration="5" />
+    <testCase name="Test WorkstationSelectionView - should trigger back home in case of wrong workstation in sessionStorage" duration="3" />
+    <testCase name="Test WorkstationSelectionView - should not trigger back home in case of wrong workstation in sessionStorage but with special rights" duration="5" />
+  </file>
+</testExecutions>

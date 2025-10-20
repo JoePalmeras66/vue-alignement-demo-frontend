@@ -1,0 +1,74 @@
+server {
+    listen       8080;
+    listen  [::]:8080;
+    server_name  localhost;
+
+    gzip        on;
+    gzip_types  text/css text/html text/javascript application/javascript;
+
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    # define environment variable endpoint which returns the environment variables from docker
+	location /env {
+	    access_log off;
+	    add_header Content-Type application/json;
+	    add_header Access-Control-Allow-Origin *;
+        return 200 '{
+            "VITE_APP_PORTAL_URL": "$VITE_APP_PORTAL_URL",
+            "VITE_APP_I18N_LOCALE": "$VITE_APP_I18N_LOCALE",
+            "VITE_APP_I18N_FALLBACK_LOCALE": "$VITE_APP_I18N_FALLBACK_LOCALE",
+            "VITE_APP_LOGGER_SERVICE": "$VITE_APP_LOGGER_SERVICE",
+            "BASE_URL": "$BASE_URL",
+            "VITE_APP_PORTAL_URL": "$VITE_APP_PORTAL_URL",
+            "VITE_APP_CILOG_ADAPTER": "$VITE_APP_CILOG_ADAPTER",
+            "VITE_APP_BFG_URL": "$VITE_APP_BFG_URL"
+        }';
+
+	}
+
+	location /version {
+        access_log off;
+        add_header Content-Type application/json;
+        add_header Access-Control-Allow-Origin *;
+        return 200 '{
+            "version": "1.4.0-r30315"
+        }';
+    }
+
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    #
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache's document root
+    # concurs with nginx's one
+    #
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
+}
