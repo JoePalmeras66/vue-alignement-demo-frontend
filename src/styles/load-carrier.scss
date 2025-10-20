@@ -13,6 +13,7 @@
 
   .header {
     inline-size: fit-content;
+    margin-bottom: 16px;
   }
 
   .load-carrier-header-placeholder {
@@ -217,6 +218,7 @@
     align-items: center; /* centers header horizontally relative to content */
     .header {
       flex: 0 0 var(--lc-header-text-size);
+      margin-right: 16px;
       //align-self: center; /* vertically centers header relative to content */
     }
   }
@@ -227,6 +229,7 @@
     .header {
       order: 1;
       flex: 0 0 var(--lc-header-text-size);
+      margin-left: 16px;
       //align-self: center; /* vertically centers header relative to content */
     }
   }
