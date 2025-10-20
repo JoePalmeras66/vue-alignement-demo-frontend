@@ -91,18 +91,10 @@ defineExpose({ headerInfoIcon })
       font-size: var(--lc-header-text-size, 24px);
       font-style: normal;
       line-height: 150% /* 36px */;
-      text-align: inherit;
+      text-align: center;
       text-transform: uppercase;
       color: var(--tgw-text-secondary);
       user-select: none;
-
-      &.right {
-        text-align: right;
-      }
-
-      &.left {
-        text-align: left;
-      }
 
       &-bold {
         user-select: text;
@@ -124,12 +116,12 @@ defineExpose({ headerInfoIcon })
 
   .align-left {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .align-right {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
   }
 }
 </style>
