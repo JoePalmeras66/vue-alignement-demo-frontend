@@ -101,6 +101,9 @@ const cardConfig = computed(() => {
 
       /* Height computed from width and aspect-ratio */
       height: calc(var(--lc-card-width, 100%) * var(--lc-aspect-ratio));
+      
+      /* Override aspect-ratio from load-carrier.scss since we're using explicit height */
+      aspect-ratio: unset;
     }
   }
 }
