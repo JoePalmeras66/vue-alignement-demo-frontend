@@ -96,6 +96,14 @@ defineExpose({ headerInfoIcon })
       color: var(--tgw-text-secondary);
       user-select: none;
 
+      &.right {
+        text-align: right;
+      }
+
+      &.left {
+        text-align: left;
+      }
+
       &-bold {
         user-select: text;
         color: var(--tgw-text-primary);
