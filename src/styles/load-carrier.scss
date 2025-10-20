@@ -21,8 +21,8 @@
   }
 
   .content {
-    width: 100%;
-    aspect-ratio: var(--pcots-lc-aspect-ratio);
+    width: var(--lc-card-width, 100%);
+    aspect-ratio: var(--lc-aspect-ratio, var(--pcots-lc-aspect-ratio));
     padding: var(--pcots-lc-padding);
     border-radius: 8px;
     box-sizing: border-box;
